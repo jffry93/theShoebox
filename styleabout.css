@@ -1,0 +1,812 @@
+:root {
+  --background: rgba(218, 87, 87, 0.95);
+}
+
+*,*::before,*::after{
+  box-sizing: border-box;
+}
+/* back to top button */
+.my_bttn{
+  height: 40px;
+  width: 40px;
+  background-color: var(--background);
+  border: none;
+  color: white;
+  position: fixed;
+  bottom: 41px;
+  right: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  display: none;
+  font-size: 20px;
+}
+
+.my_bttn:hover{
+  transform: scale(1.05) translateY(-5px);
+  border: 1px solid var(--background);
+  color: var(--background);
+  background: inherit;
+}
+body {
+  margin: 0;
+  background: white;
+  /*sign up body styles */
+  font-size: 16px;
+  color: #919090;
+  line-height: 1.6;
+  height: 100vh;
+  font-family:"roboto-bold";
+
+}
+/*fonts*/
+.logo{
+  font-family:"roboto-BlackItalic";
+}
+
+/* navigation styles */
+
+header {
+  background: var(--background);
+  color: white;
+  font-weight: 800;
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  top:0;
+  padding: 23px;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--background);
+  width: 100%;
+  transform: scale(1,0);
+  transform-origin: top;
+  transition: 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/*nav container*/
+nav li {
+  margin-bottom:  1em;
+  margin-left: 1em;
+}
+
+/* nav items font*/
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 800px;
+  padding: 2vh;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+nav a:hover {
+  color: #919090;
+  transition: 0.4s;
+}
+
+
+.nav-toggle:checked ~ nav{
+transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+
+/* 
+
+
+IF YOU ARE LOOKING AT THIS ON A LARGER SCREEN 
+
+
+
+
+*/
+
+@media screen and (min-width: 850px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 1fr) 1fr;
+  }
+
+  .logo {
+    grid-column: 1 / 3;
+  }
+
+  nav {
+    all: unset;
+    grid-column: 3 / 5 ;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10vh;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+
+  nav a {
+    opacity: 1;
+  }
+}
+
+/* About Us Content*/
+/* top of the page */
+#topImg{
+  background-image: url(images/casualshoes.jpeg);
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  top:0;
+  bottom: 0;
+  height: 90vh;
+  min-height: 600px;
+  width: 100%;
+  z-index: -10;
+}
+
+#topImg-overlay{
+  position: absolute;
+  background-color: rgba(0,0,0,0.5);
+  top:0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -5;
+}
+#topImg h1{
+  color: white;
+  position: absolute;
+  top:40%;
+  transform: translateY(-50%);
+  font-size: 100px;
+  font-weight: 800;
+  width:100%;
+  text-align: center;
+  animation: fade-in 3s ease-in;
+}
+@keyframes fade-in{
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+/* Origin story */
+.origin{
+  width: 100%;
+  text-align: center;
+  padding: 80px;
+  padding-left: 200px;
+  padding-right: 200px;
+  font-size: 15px;
+}
+
+.origin h1{
+  padding: 20px;
+}
+.originlogo{
+  color: var(--background);
+  text-decoration: inherit;
+  font-size: 40px;
+  font-weight: 800;
+  font-family:"roboto-BlackItalic";
+}
+/* about us */
+#aboutUs{
+  width: 100%;
+  text-align: center;
+  padding-top: 60px;
+}
+
+#aboutUs h1{
+  color: var(--background);
+  font-size: 50px;
+  font-weight: 800;
+}
+#aboutUsImgBox{
+  overflow: hidden;
+  background: white;
+  position: relative;
+  z-index: -1;
+  opacity: .5;
+  top:0;
+  bottom: 0;
+  height: 50vh;
+  width: 100%;
+  min-height: 500px;
+}
+.aboutUsImg{
+  background-image: url(images/aboutusimg.jpeg);
+  background-size: cover ;
+  background-position: center center;
+  position: relative;
+  z-index: 2;
+  top:0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  animation: slide1 10s infinite;
+  z-index: 1;
+}
+@keyframes slide1{
+  16%{
+    background:url(images/aboutusimg.jpeg);
+    background-size: cover ;
+    background-position: center center;
+  }
+  33%{
+    background:url(images/aboutusimg3.jpeg);
+    background-size: cover ;
+    background-position: center center;
+  }
+  49%{
+    background:url(images/aboutusimg3.jpeg);
+    background-size: cover ;
+    background-position: center center;
+  }
+  66%{
+    background:url(images/aboutusimg2.jpeg);
+    background-size: cover ;
+    background-position: center center;
+  }
+  82%{
+    background:url(images/aboutusimg2.jpeg);
+    background-size: cover ;
+    background-position: center center;
+  }
+
+}
+
+
+#aboutUs p{
+  font-size: 25px;
+  font-weight: 800;
+  margin: 10px;
+}
+/* our mission */
+#ourMission{
+  display: grid;
+  grid-template-columns: 40% 50%;
+  grid-gap: 40px;
+  padding-top: 80px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 25px;
+}
+#ourMission h1{
+  color:var(--background);
+  padding: 20px;
+  font-weight: 800;
+}
+#ourMission p{
+  padding: 10px;
+  font-size: 20px;
+}
+
+#missionContent{
+  margin: 20px;
+}
+
+#missionImg{
+  width:100%;
+  height: 50vh;
+  min-height: 450px;
+  position: relative;
+  background: url(images/poverty1.jpeg);
+  background-size: cover;
+  background-position: center center;
+  animation: slide 16s infinite;
+  z-index: -1;
+}
+@keyframes slide{
+  10%{
+    background:url(images/poverty1.jpeg);
+    background-size: cover;
+    background-position: center center;
+  }
+  20%{
+    background:url(images/poverty2.jpeg);
+    background-size: cover;
+    background-position: center center;
+  }
+  30%{
+    background:url(images/poverty2.jpeg);
+    background-size: cover;
+    background-position: center center;
+  }
+  40%{
+    background:url(images/poverty3.jpeg);
+    background-size: cover;
+    background-position: center center;
+  }
+  50%{
+    background:url(images/poverty3.jpeg);
+    background-size: cover;
+    background-position: center center;
+  }
+  60%{
+    background:url(images/poverty4.jpeg);
+    background-size: cover;
+    background-position: center center;
+  }
+  70%{
+    background:url(images/poverty4.jpeg);
+    background-size: cover;
+    background-position: center center;
+  }
+  80%{
+    background:url(images/poverty5.jpeg);
+    background-size: cover;
+    background-position: center center;
+  }
+  90%{
+    background:url(images/poverty5.jpeg);
+    background-size: cover;
+    background-position: center center;
+  }
+
+}
+
+/* reviews */
+
+#reviews{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#reviews h1{
+  color: var(--background);
+  font-size: 50px;
+  font-weight: 800;
+  padding-top: 80px;
+  padding-bottom: 20px;
+  margin: 0;
+}
+
+#reviews a{
+  font-size: 50px;
+  font-weight: 800;
+  color: var(--background);
+}
+
+#reviews .star-outline{
+  color:#919090;
+}
+
+#reviews #justin{
+  color: var(--background);
+  text-decoration: inherit;
+  font-size: 30px;
+  font-weight: 800;
+}
+#reviews #nike{
+  color: var(--background);
+  text-decoration: inherit;
+  font-size: 30px;
+  font-weight: 800;
+}
+#reviews #nyt{
+  color: var(--background);
+  text-decoration: inherit;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+/* sponsors */
+
+#sponsors{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#sponsors h1{
+  color: var(--background);
+  font-size: 50px;
+  padding:80px;
+}
+#sponsors h2{
+  font-size: 30px;
+  font-weight: 800;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+#productslide{
+  text-align: center;
+  padding-top: 60px;
+  color: black;
+  font-size: 60px;
+  margin: 0;
+}
+
+#slider {
+  height:300px;
+  width:90%;
+  margin:auto;
+  overflow:hidden;
+  background:#CCC;
+}
+
+.slide {
+  height:300px;
+  float:left;
+  text-align:center;
+  border:1PX SOLID white;
+  line-height:8em;
+  font-size:40px;
+}
+#one{
+  position: relative;
+background-image:url(images/brand11.jpg);
+background-size: cover;
+background-position: center;
+}
+#two{
+background-image:url(images/brand22.jpeg);
+background-size: cover;
+background-position: center;
+}
+#three{
+  background-image:url(images/brand4.jpg);
+  background-size: cover;
+  background-position: center;
+  }
+#four{
+    background-image:url(images/brand3.jpg);
+    background-size: cover;
+    background-position: center;
+    }
+#five{
+      background-image:url(images/branddc.jpg);
+      background-size: cover;
+      background-position: center;
+      }
+#six{
+        background-image:url(images/brandtoms.png);
+        background-size: cover;
+        background-position: center;
+        }
+
+/* sign up button */
+.bottomPage{
+  position: relative;
+  top: 00px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  padding-left: 10%;
+  width:100%;
+  color:white;
+  background-color: #919090;
+  z-index: -1;
+}
+
+.bottomPage h1{
+  color: var(--background);
+  font-size: 40px;
+  font-weight: 800;
+}
+.bottomPage h2{
+  font-size: 25px;
+}
+.bottomPage .fas{
+  color: rgb(218, 87, 87);
+}
+
+.bottomPage input{
+  width:270px;
+  height: 25px;
+  font-size:15px;
+  color: #919090;
+  padding-left: 5px;
+}
+.bottomPage input::-webkit-input-placeholder{
+  color: #919090;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.bottomPage button{
+  font-size: 16.5px;
+  background: white;
+  border: 1.5px solid white;
+}
+@media screen and (max-width: 1250px){
+  #ourMission{
+    display: flex;
+    flex-direction: column;
+    row-gap: 100px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .origin{
+    width: 100%;
+    text-align: center;
+    padding: 80px;
+    font-size: 15px;
+  }
+  #slider {
+    height:200px;
+    width:100%;
+    margin:auto;
+    overflow:hidden;
+    background:#CCC;
+  }
+  .slide {
+    height:200px;
+    float:left;
+    border:1PX SOLID white;
+    line-height:8em;
+    font-size:40px;
+  }
+
+}
+@media screen and (max-width: 800px){
+  #topImg h1{
+    font-size: 70px;
+  }
+  .origin{
+    font-size: 10px;
+  }
+  .originlogo{
+    font-size: 30px;
+  }
+  #aboutUs h1{
+    font-size: 40px;
+    margin: 10px;
+    padding-bottom: 40px;
+  }
+  #aboutUs p{
+    font-size: 20px;
+    margin: 10px;
+  }
+  #ourMission h1{
+    font-size: 40px;
+  }
+  #ourMission p{
+    font-size: 20px;
+  }
+  #reviews h1{
+    font-size: 40px;
+  }
+  
+  #reviews a{
+    font-size: 40px;
+  }
+  #reviews h2{
+    font-size: 20px;
+  }
+  #reviews #justin{
+    color: var(--background);
+    text-decoration: inherit;
+    font-size: 20px;
+  }
+  #reviews #nike{
+    color: var(--background);
+    text-decoration: inherit;
+    font-size: 20px;
+  }
+  #reviews #nyt{
+    color: var(--background);
+    text-decoration: inherit;
+    font-size: 20px;
+  }
+  #sponsors h1{
+    font-size: 40px;
+  }
+  #sponsors h2{
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .origin{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  #topImg h1{
+    font-size: 50px;
+  }
+  .origin{
+    font-size: 10px;
+  }
+  .originlogo{
+    font-size: 27px;
+  }
+  #aboutUs h1{
+    font-size: 30px;
+    margin: 10px;
+    padding-bottom: 40px;
+  }
+  #aboutUs p{
+    font-size: 20px;
+    margin: 10px;
+  }
+  #ourMission h1{
+    font-size: 30px;
+  }
+  #ourMission p{
+    font-size: 17px;
+  }
+  #reviews h1{
+    font-size: 30px;
+  }
+  
+  #reviews a{
+    font-size: 30px;
+  }
+  #reviews h2{
+    font-size: 17px;
+  }
+  #reviews #justin{
+    font-size: 17px;
+  }
+  #reviews #nike{
+    font-size: 17px;
+  }
+  #reviews #nyt{
+    font-size: 17px;
+  }
+  #sponsors h1{
+    font-size: 30px;
+  }
+  #sponsors h2{
+    font-size: 19px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .bottomPage{
+    position: relative;
+    top: 00px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
+    width:100%;
+    color:white;
+    background-color: #919090;
+    z-index: -1;
+  }
+  
+  .bottomPage h1{
+    color: var(--background);
+  }
+  .bottomPage h2{
+    font-size: 18px;
+  }
+  .bottomPage .fas{
+    color: rgb(218, 87, 87);
+  }
+  
+  .bottomPage input{
+    width:75%;
+    height: 25px;
+    font-size:15px;
+    color: #919090;
+    padding-left: 5px;
+  }
+  .bottomPage input::-webkit-input-placeholder{
+    color: #919090;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  .bottomPage button{
+    font-size: 16.5px;
+    background: white;
+    border: 1.5px solid white;
+  }
+  .my_bttn{
+    height: 40px;
+    width: 40px;
+    background-color: var(--background);
+    border: none;
+    color: white;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    display: none;
+    font-size: 20px;
+  }
+  #slider {
+    height:100px;
+    width:100%;
+    margin:auto;
+    overflow:hidden;
+    background:#CCC;
+  }
+  .slide {
+    height:100px;
+    float:left;
+    border:1PX SOLID white;
+    line-height:8em;
+    font-size:40px;
+  }
+}
+
+
+
+
+
+
+

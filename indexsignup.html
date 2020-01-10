@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TheShoeBox Sign Up</title>
+    <link href="stylesignup.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/868c6ab4df.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="scriptsignup.js"></script>
+</head>
+
+<body>
+    <button class="my_bttn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <div class="container">
+
+        <header>
+            <h1 class="logo">TheShoeBox.</h1>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="indexabout.html">About</a></li>
+                    <li><a href="indexcontact.html">Contact</a></li>
+                    <li><a href="indexsignup.html">Sign Up</a></li>
+                </ul>
+            </nav>
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+        </header>
+        <div id="logincontainer">
+
+            <div id="login-box">
+                <div class="left-box">
+                    <h1> Sign up with your email address</h1>
+                    <p> Create an account and start receiving new shoes every month</p>
+                    <form>
+
+                        <div/div action="#" method="GET">
+                            <div>
+                                <input type="email" name="email" placeholder="*Email" required/>
+                            </div>
+                            <div>
+                                <input type="email" name="email1" placeholder="*Confirm email" required/>
+                            </div>
+                            <div>
+                                <input type="text" name="nickname" placeholder="*What should we call you?" required/>
+                            </div>
+                            <div>
+                                <input type="password" name="password" placeholder="*Password" required/>
+                            </div>
+                            <div>
+                                <input type="password" name="password2" placeholder="*Retype password" required/>
+                            </div>
+                                <p class="dateofbirth">Date of birth</p>
+                            <div class="birthday">
+                                <input type="number" name="day" placeholder="Day" min="1" max="31" required>
+                                <div class="custom-select" style="width:200px;">
+                                <select required>
+                                    <option value="">Month</option>
+                                    <option value="january">January</option>
+                                    <option value="february">February</option>
+                                    <option value="march">March</option>
+                                    <option value="april">April</option>
+                                    <option value="may">May</option>
+                                    <option value="june">June</option>
+                                    <option value="july">July</option>
+                                    <option value="august">August</option>
+                                    <option value="september">September</option>
+                                    <option value="october">October</option>
+                                    <option value="november">November</option>
+                                    <option value="december">December</option>
+                                </select>
+                                </div>
+                                <input type="number" name="year" placeholder="Year" min="1900" max="2005" required>
+                            </div>
+                            <div class="radio">
+                                <label for="male">Male</label>
+                                <input type="radio" name="gender" id="male" value="male" required>
+                                <label for="female">Female</label>
+                                <input type="radio" name="gender" id="female" value="female">
+                                <label for="non-binary">Non-binary</label>
+                                <input type="radio" name="gender" id="non-binary" value="non-binary">
+                            </div>
+                            <div id="warning">
+                                <p> We may send you emails with news or promotions occasionally</p>
+                            </div>
+                            <div class="agree">
+                                <input type="checkbox" name="agree" required>
+                                <label for="agree"> I agree to the ShoeBox. terms & conditions and Privacy
+                                    policy</label>
+                            </div>
+                            <input type="submit" name="signup-button" value="Sign Up" />
+                        </div>
+                    </form>
+                </div>
+
+                <div class="right-box">
+                    <span class="signinwith">Sign in with<br /> Social Network </span>
+                    <button class="social facebook"> Log in with Facebook</button>
+                    <button class="social twitter"> Log in with Twitter</button>
+                    <button class="social google"> Log in with Google+</button>
+                </div>
+                <div class="or">
+                    OR
+                </div>
+
+            </div>
+        </div>
+        <div class="bottomPage">
+            <h1> Sign Me Up</h1>
+            <h2>Be the first to know about new products, news and promotions.</h2>
+            <form id="newsLetter">
+                <input type="email" id="subscribebtn" placeholder="Your Email">
+                <button type="submit" onclick="validation();"><i class="fas fa-arrow-right"></i></button>
+            </form>
+    
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+            <script>
+    
+                function validation() {
+    
+                    var subscribeBtn = document.getElementById("subscribebtn").value;
+    
+                    if (subscribeBtn.includes('@' && '.com')) {
+                        swal({
+                            title: "Awesome!",
+                            text: "Welcome to the family!",
+                            icon: "success",
+                            button: "Continue",
+                        });
+                    } else {
+                        swal({
+                            title: "Ooooops...",
+                            text: "you messed up!",
+                            icon: "error",
+                            button: "try again",
+                        });
+                    }
+                }
+                const newsLetter = document.getElementById("newsLetter");
+    
+                newsLetter.addEventListener("submit", (e) => {
+                    e.preventDefault();
+                });
+    
+    
+    
+            </script>
+    
+        </div>
+</body>
+
+</html>

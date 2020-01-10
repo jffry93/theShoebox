@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Shoe Box Homepage</title>
+    <link href="style.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Barlow' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/868c6ab4df.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <button class="my_bttn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <header>
+        <h1 class="logo">TheShoeBox.</h1>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="indexabout.html">About</a></li>
+                <li><a href="indexcontact.html">Contact</a></li>
+                <li><a href="indexsignup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+    </header>
+
+
+    <div class="slidershow">
+
+        <div class="slides">
+            <div class="slides-opacity"></div>
+            <div class="slides-overlay"></div>
+            <input type="radio" name="r" id="r1" checked>
+            <input type="radio" name="r" id="r2">
+            <input type="radio" name="r" id="r3">
+            <input type="radio" name="r" id="r4">
+            <input type="radio" name="r" id="r5">
+            <div class="slide s1">
+                <h1 id="whiteFont">Subscribe for $30/month</h1>
+                <img src="images/nikeshoebox.jpg">
+            </div>
+            <div class="slide">
+                <h1>We send you new shoes every month</h1>
+                <img src="images/shoe2.jpeg">
+            </div>
+            <div class="slide">
+                <h1 id="whiteFont">Partnered with offical retailers</h1>
+                <img src="images/shoe3.jpeg">
+            </div>
+            <div class="slide">
+                <h1 >We have the newest styles</h1>
+                <img src="images/colornike.jpeg">
+            </div>
+            <div class="slide">
+                <h1 id="whiteFont">Cancel anytime</h1>
+                <img src="images/shoe5.jpeg">
+            </div>
+        </div>
+
+        <div class="navigation">
+            <label for="r1" class="bar"></label>
+            <label for="r2" class="bar"></label>
+            <label for="r3" class="bar"></label>
+            <label for="r4" class="bar"></label>
+            <label for="r5" class="bar"></label>
+        </div>
+    </div>
+
+    <h1 data-aos="fade-in" class="shoeType">Choose your <a href="https://www.enchantedlearning.com/wordlist/shoes.shtml"
+            target="_blank">type</a> of shoe</h1>
+
+    <div data-aos="fade-down" class="typeContainer">
+        <div class="box">
+            <div class="box-Overlay"></div>
+            <div class="typeImgBox">
+                <img class="casualwear" src="images/casboots.jpeg">
+            </div>
+            <div class="typeContent">
+                <h1>Casualwear</h1>
+                <p>Shoes you can wear with any outfit
+                    <br> Slip on these shoes everyday
+                </p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-Overlay"></div>
+            <div class="typeImgBox">
+                <img class="officewear" src="images/officewearfinal3.jpeg">
+            </div>
+            <div class="typeContent">
+                <h1>Officewear</h1>
+                <p>Shoes you can wear to work
+                    <br> Impress your boss with a clean look
+                </p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-Overlay"></div>
+            <div class="typeImgBox">
+                <img class="activewear" src="images/activewear13.jpeg">
+            </div>
+            <div class="typeContent">
+                <h1>Activewear</h1>
+                <p>Shoes you would wear when you are active
+                    <br> Go extra hard
+                </p>
+            </div>
+        </div>
+    </div>
+    <div data-aos="fade-in" class="measureContainer">
+        <div class="measure">
+            <div class="footImg">
+                <div class="measure-overlay"></div>
+                <img src="images/measure1.jpeg">
+            </div>
+            <div class="measureContent">
+                <h1>Send us your measurements</h1>
+                <p>In order to garuntee these shoes are right for you.We request you measure your feet so we can provide
+                    you a shoe that fits amazing. </p>
+                <ul>
+                    <li>1.Tape a piece of paper down to the floor. Trace an outline of your foot to
+                        measure</li>
+                    <li>2.Place your foot firmly on top of the piece of paper.</li>
+                    <li>3.Draw the outline of your foot all the way around. </li>
+                    <li>4.Mark the length and width of your foot on the paper. </li>
+                    <li>5.Measure the length of your foot. Use a tape measure or ruler to measure from the top to
+                        bottom. </li>
+                    <li>6.Measure the width of your foot.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <h1 data-aos="fade-in" class="shoeStyle">Tell us your <a href="https://blog.stylewe.com/10-types-of-fashion-styles/"
+            target="_blank">style</a> type</h1>
+
+    <div data-aos="fade-down" class="typeContainer" id="styleContainer">
+        <div class="box">
+            <div class="box-Overlay"></div>
+            <div class="typeImgBox">
+                <img class="clean" src="images/white_nike.jpeg">
+            </div>
+            <div class="typeContent">
+                <h1>Clean</h1>
+                <p>Only neutral colours
+                    <br> You may recieve black, grey, white or navy blue colour shoes</br>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-Overlay"></div>
+            <div class="typeImgBox">
+                <img class="subtle" src="images/subtle2.jpeg">
+            </div>
+            <div class="typeContent">
+                <h1>Subtle</h1>
+                <p>The shoe will mainly be neutral colours
+
+                    <br> There will also be one more additional colour as an accent</br>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-Overlay"></div>
+            <div class="typeImgBox">
+                <img class="loud" src="images/loud.jpeg">
+            </div>
+            <div class="typeContent">
+                <h1>Loud</h1>
+                <p>For that person that loves to express themselves through colour
+                    <br> These shoes will have colours all over the place</br>
+            </div>
+        </div>
+    </div>
+    <h1 data-aos="fade-in" class="profInfo"> **We use information from your profile to provide you the best experience
+    </h1>
+    <div class="final">
+        <div data-aos="fade-in">
+            <h1 class="finalText"> Enjoy a new pair of shoes every month!</h1>
+            <a href="indexsignup.html" class="dopeButton">Sign Up Today</a>
+        </div>
+    </div>
+    <div class="finalContainer">
+    </div>
+    <div class="bottomPage">
+        <h1> Sign Me Up</h1>
+        <h2>Be the first to know about new products, news and promotions.</h2>
+        <form id="newsLetter">
+            <input type="email" id="subscribebtn" placeholder="Your Email">
+            <button type="submit" onclick="validation();"><i class="fas fa-arrow-right"></i></button>
+        </form>
+
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script>
+
+            function validation() {
+
+                var subscribeBtn = document.getElementById("subscribebtn").value;
+
+                if (subscribeBtn.includes('@' && '.com')) {
+                    swal({
+                        title: "Awesome!",
+                        text: "Welcome to the family!",
+                        icon: "success",
+                        button: "Continue",
+                    });
+                } else {
+                    swal({
+                        title: "Ooooops...",
+                        text: "you messed up!",
+                        icon: "error",
+                        button: "try again",
+                    });
+                }
+            }
+            const newsLetter = document.getElementById("newsLetter");
+
+            newsLetter.addEventListener("submit", (e) => {
+                e.preventDefault();
+            });
+
+
+
+        </script>
+
+    </div>
+
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 400,
+            duration: 1000,
+            once: true,
+        });
+    </script>
+</body>
+
+</html>

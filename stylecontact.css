@@ -1,0 +1,700 @@
+:root {
+  --background: rgba(218, 87, 87, 0.95);
+}
+
+*,*::before,*::after{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: white;
+  /*sign up body styles */
+  font-size: 16px;
+  color: #919090;
+  line-height: 1.6;
+  height: 100vh;
+  font-family:"roboto-bold";
+
+}
+.my_bttn{
+  height: 40px;
+  width: 40px;
+  background-color: var(--background);
+  border: none;
+  color: white;
+  position: fixed;
+  bottom: 41px;
+  right: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  display: none;
+  font-size: 20px;
+  z-index: 1000;
+}
+
+.my_bttn:hover{
+  transform: scale(1.05) translateY(-5px);
+  border: 1px solid var(--background);
+  color: var(--background);
+  background: inherit;
+}
+/*fonts*/
+.logo{
+  font-family:"roboto-BlackItalic";
+}
+
+/* navigation styles */
+
+header {
+  background: var(--background);
+  color: white;
+  font-weight: 800;
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  top:0;
+  padding: 23px;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--background);
+  width: 100%;
+  transform: scale(1,0);
+  transform-origin: top;
+  transition: 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/*nav container*/
+nav li {
+  margin-bottom:  1em;
+  margin-left: 1em;
+}
+
+/* nav items font*/
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 800px;
+  padding: 2vh;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+nav a:hover {
+  color: #919090;
+  transition: 0.4s;
+}
+
+
+.nav-toggle:checked ~ nav{
+transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+
+/* 
+
+
+IF YOU ARE LOOKING AT THIS ON A LARGER SCREEN 
+
+
+
+
+*/
+
+@media screen and (min-width: 800px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 1fr) 1fr;
+  }
+
+  .logo {
+    grid-column: 1 / 3;
+  }
+
+  nav {
+    all: unset;
+    grid-column: 3 / 5 ;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10vh;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+
+  nav a {
+    opacity: 1;
+  }
+}
+  /*social media button styles */
+  .social-menu ul{
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    top: 410px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+
+  }
+  a {
+    text-decoration: inherit;
+    font-weight: 800;
+    color:#919090;
+  }
+
+  .social-menu ul li {
+    list-style: none;
+    margin: 0 12px;
+    }
+    
+.social-menu ul li .fab {
+  font-size: 25px;
+  line-height: 60px;
+  transition: 0.6s;
+  color: white;
+}
+.social-menu ul li:nth-child(1) .fab:hover {
+  color: #fff;
+}
+.social-menu ul li:nth-child(2) .fab:hover {
+  color: #fff;
+}
+.social-menu ul li:nth-child(3) .fab:hover {
+  color: white;
+}
+.social-menu ul li:nth-child(4) .fab:hover {
+  color: #fff;
+}
+
+.social-menu ul li a{
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #919090;
+  text-align: center;
+  transition: .6s;
+  box-shadow: 0 5px 4px rgba(0,0,0,0.5);
+}
+
+.social-menu ul li a:hover{
+  transform: translate(0, -10px);
+}
+
+.social-menu ul li:nth-child(1) a:hover{
+  background-color: #3b5999;
+}
+.social-menu ul li:nth-child(2) a:hover{
+  background-color: #e4405f;
+}
+.social-menu ul li:nth-child(3) a:hover{
+  background-color: #FFFC00;
+}
+.social-menu ul li:nth-child(4) a:hover{
+  background-color: #55acee;
+}
+
+/* form */
+
+
+.header{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top:25px;
+  transform: (-50%, -50%);
+}
+.header h1{
+  color: rgb(218, 87, 87);
+  font-size: 46px;
+  font-family:"roboto-regular";
+}
+.header p{
+  color:#919090;
+  font-size: 20px;
+  padding: 0px, 40px, 30px, 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.form{
+  position: relative;
+  top: 250px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.form input{
+  display: flex;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  height: 25px;
+  width: 30vw;
+  max-width:450px;
+  min-width:300px;
+  margin: 30px 0;
+  background: rgba(0,0,0,0);
+  border: 2px solid #919090;
+  color: #919090;
+  padding-left:5px;
+}
+input:focus{
+  outline: 2px solid rgb(218, 87, 87);
+}
+
+.form input::-webkit-input-placeholder{
+  color: #919090;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.form textarea::-webkit-input-placeholder{
+  color: #919090;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.form button {
+  position: relative;
+  top: 80px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  font-size: 16px;
+  color:white;
+  border: solid 2px white;
+  border-radius: 50px;
+  padding: 10px 20px;
+  background: var(--background);
+  transition-duration: 200ms;
+}
+
+.form button:hover{
+  background-color:white;
+  color: rgb(218, 87, 87);
+  border: 2px solid rgba(218, 87, 87, 0.95)
+}
+
+.topText{
+  position: absolute;
+  text-align: center;
+  top:40%;
+  transform: translateY(-50%);
+  width: 100%;
+  font-size: 80px;
+  color: white;
+  z-index: 2;  animation: fade-in 3s ease-in;
+}
+@keyframes fade-in{
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.topTextOverlay{
+  position: relative;
+  top: 0px;
+  width: 100%;
+  height: 90vh;
+  min-height: 500px;
+  padding:250px 0px 200px 0px;
+  margin:0px;
+  color: white;
+  background-image: url(images/white_nike.jpeg);;
+  background-size: cover;
+  background-position: center center;
+  z-index: 1;
+}
+.topTextImg{
+  position: absolute;
+  text-align: center;
+  top:0px;
+  width: 100%;
+  height: 90vh;
+  min-height: 500px;
+  padding:250px 0px 200px 0px;
+  margin:0px;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  background-size: cover;
+  z-index: -1;
+}
+
+.message{
+  position: relative;
+  top:15px;
+  width:50vw;
+  min-width: 350px;
+  max-width: 550px;
+  height: 150px;
+  background-color: white;
+  border: 2px solid #919090;
+  padding: 10px;
+  margin: 20px,0px, 30px;
+  color: #919090;
+}
+.message:focus{
+  outline: 2px solid rgb(218, 87, 87);
+}
+
+/* divider */
+
+.divider hr{
+  position: relative;
+  top: 230px;
+  width: 80%;
+}
+
+.customerService{
+  position: relative;
+  text-align: center;
+  top: 280px;
+  color:#919090;
+}
+.customerService h1{
+  color:rgb(218, 87, 87);
+  font-family:"roboto-regular";
+  font-size:30px;
+}
+
+.customerService ul li {
+  position: relative;
+  right: 20px;
+  text-align: center;
+  justify-content: center;
+  list-style: none;
+  margin: 0 12px;
+  font-size: 20px;
+}
+
+.customerService ul li .far {
+    font-size: 20px;
+    transition: 0.6s;
+    color: #919090;
+    padding-right: 10px;
+  }
+  .customerService ul li .fas {
+    font-size: 20px;
+    transition: 0.6s;
+    color: #919090;
+    padding-right: 10px;
+  }
+
+  .corporateOffice{
+    position: relative;
+    top: 330px;
+    text-align: center;
+    justify-content: center;
+    list-style: none;
+    color:rgb(218, 87, 87);
+  }
+.corporateOffice h1{
+  font-family:"roboto-regular";
+  font-size:30px;
+}
+
+  .corporateOffice a{
+    font-size: 20px;
+    transition: 0.6s;
+  }
+  .corporateOffice .fas {
+    font-size: 20px;
+    transition: 0.6s;
+    color: #919090;
+    padding-right: 10px;
+  }
+.connect{
+  position: relative;
+  text-align: center;
+  top:400px;
+  color:rgb(218, 87, 87);
+  font-family:"roboto-regular";
+  font-size:30px;
+}
+
+.bottomPage{
+  position: relative;
+  top: 500px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  padding-left: 10%;
+  width:100%;
+  color:white;
+  background-color: #919090;
+  font-size: 15px;
+}
+
+.bottomPage h1{
+  color: var(--background);
+}
+.bottomPage h2{
+  font-size: 20px;
+}
+.bottomPage .fas{
+  color: rgb(218, 87, 87);
+}
+
+.bottomPage input{
+  width:250px;
+  height: 25px;
+  font-size:15px;
+  color: #919090;
+  padding-left: 5px;
+}
+.bottomPage input::-webkit-input-placeholder{
+  color: #919090;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.bottomPage button{
+  font-size: 16.5px;
+  background: white;
+  border: 1.5px solid white;
+}
+/* Newsletter pop up */
+
+.swal-overlay {
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+.swal-title {
+  color: var(--background);
+}
+
+.swal-text {
+  padding: 17px;
+  margin: 22px;
+  text-align: center;
+  color: #919090
+}
+
+.swal-footer {
+  background-color: var(--background);
+  margin-top: 32px;
+  overflow: hidden;
+}
+.swal-button {
+  left: 50%;
+  padding: 15px 40px;
+  border-radius: 60px;
+  background-color: white;
+  font-size: 20px;
+  font-weight: 800;
+  color:var(--background);
+  transition-duration: 200ms;
+}
+
+
+/* iphone 5  */
+@media screen and (max-width: 500px){
+  .topText{
+    font-size: 50px;
+  }
+  .header h1{
+    font-size: 40px;
+  }
+  .header p{
+    font-size: 18px;
+  }
+  .customerService h1{
+    font-size:25px;
+  }
+  
+  .customerService ul li {
+    font-size: 15px;
+  }
+  
+  .customerService ul li .far {
+      font-size: 15px;
+    }
+    .customerService ul li .fas {
+      font-size: 15px;
+    }
+  .corporateOffice h1{
+    font-size:25px;
+  }
+  
+    .corporateOffice a{
+      font-size: 15px;
+    }
+    .corporateOffice .fas {
+      font-size: 15px;
+    }
+  .connect{
+    font-size:25px;
+  }
+  .social-menu ul li .fab {
+    font-size: 25px;
+  }
+  .my_bttn{
+    height: 40px;
+    width: 40px;
+    background-color: var(--background);
+    border: none;
+    color: white;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    display: none;
+    font-size: 20px;
+  }
+  .bottomPage{
+    position: relative;
+    top: 500px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    padding-left: 10%;
+    width:100%;
+    color:white;
+    background-color: #919090;
+  }
+  
+  .bottomPage h1{
+    color: var(--background);
+  }
+  .bottomPage .fas{
+    color: rgb(218, 87, 87);
+  }
+  
+  .bottomPage input{
+    width:250px;
+    height: 25px;
+    font-size:15px;
+    color: #919090;
+    padding-left: 5px;
+  }
+  .bottomPage input::-webkit-input-placeholder{
+    color: #919090;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  .bottomPage button{
+    font-size: 16.5px;
+    background: white;
+    border: 1.5px solid white;
+  }
+}
+@media screen and (max-width: 320px){
+
+  .message{
+    position: relative;
+    top:15px;
+    width:50vw;
+    min-width: 310px;
+    max-width: 550px;
+    height: 150px;
+    background-color: white;
+    border: 2px solid #919090;
+    padding: 10px;
+    margin: 20px,0px, 30px;
+    color: #919090;
+  }
+  .form input{
+    display: flex;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    height: 25px;
+    width: 30vw;
+    max-width:450px;
+    min-width:280px;
+    margin: 30px 0;
+    background: rgba(0,0,0,0);
+    color: #919090;
+  }
+  .bottomPage input{
+    width:200px;
+    height: 25px;
+    font-size:15px
+  }
+
+}
+
+
+
