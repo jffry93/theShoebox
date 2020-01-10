@@ -1,271 +1,3 @@
-:root {
-  --background: rgba(218, 87, 87, 0.95);
-}
-
-*,*::before,*::after{
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  background: white;
-  /*sign up body styles */
-  font-size: 16px;
-  color: #919090;
-  line-height: 1.6;
-  height: 100vh;
-  font-family:"roboto-bold";
-
-}
-.my_bttn{
-  height: 40px;
-  width: 40px;
-  background-color: var(--background);
-  border: none;
-  color: white;
-  position: fixed;
-  bottom: 41px;
-  right: 30px;
-  border-radius: 5px;
-  cursor: pointer;
-  outline: none;
-  display: none;
-  font-size: 20px;
-  z-index: 1000;
-}
-
-.my_bttn:hover{
-  transform: scale(1.05) translateY(-5px);
-  border: 1px solid var(--background);
-  color: var(--background);
-  background: inherit;
-}
-/*fonts*/
-.logo{
-  font-family:"roboto-BlackItalic";
-}
-
-/* navigation styles */
-
-header {
-  background: var(--background);
-  color: white;
-  font-weight: 800;
-  text-align: center;
-  position: fixed;
-  z-index: 999;
-  width: 100%;
-  top:0;
-  padding: 23px;
-}
-
-.nav-toggle {
-  display: none;
-}
-
-.nav-toggle-label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-left: 1em;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.nav-toggle-label span,
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-  display: block;
-  background: white;
-  height: 2px;
-  width: 2em;
-  border-radius: 2px;
-  position: relative;
-}
-
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-  content: '';
-  position: absolute;
-}
-
-.nav-toggle-label span::before {
-  bottom: 7px;
-}
-.nav-toggle-label span::after {
-  top: 7px;
-}
-
-nav {
-  position: absolute;
-  text-align: left;
-  top: 100%;
-  left: 0;
-  background: var(--background);
-  width: 100%;
-  transform: scale(1,0);
-  transform-origin: top;
-  transition: 400ms ease-in-out;
-}
-
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-/*nav container*/
-nav li {
-  margin-bottom:  1em;
-  margin-left: 1em;
-}
-
-/* nav items font*/
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 800px;
-  padding: 2vh;
-  opacity: 0;
-  transition: opacity 150ms ease-in-out;
-  position: relative;
-  z-index: 1;
-}
-
-nav a:hover {
-  color: #919090;
-  transition: 0.4s;
-}
-
-
-.nav-toggle:checked ~ nav{
-transform: scale(1,1);
-}
-
-.nav-toggle:checked ~ nav a {
-  opacity: 1;
-  transition: opacity 250ms ease-in-out 250ms;
-}
-
-
-/* 
-
-
-IF YOU ARE LOOKING AT THIS ON A LARGER SCREEN 
-
-
-
-
-*/
-
-@media screen and (min-width: 800px) {
-  .nav-toggle-label {
-    display: none;
-  }
-
-  header {
-    display: grid;
-    grid-template-columns: 1fr auto minmax(600px, 1fr) 1fr;
-  }
-
-  .logo {
-    grid-column: 1 / 3;
-  }
-
-  nav {
-    all: unset;
-    grid-column: 3 / 5 ;
-    display:flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 10vh;
-  }
-
-  nav ul {
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  nav li {
-    margin-left: 3em;
-    margin-bottom: 0;
-  }
-
-  nav a {
-    opacity: 1;
-  }
-}
-  /*social media button styles */
-  .social-menu ul{
-    position: relative;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    top: 410px;
-    padding: 0;
-    margin: 0;
-    display: flex;
-
-  }
-  a {
-    text-decoration: inherit;
-    font-weight: 800;
-    color:#919090;
-  }
-
-  .social-menu ul li {
-    list-style: none;
-    margin: 0 12px;
-    }
-    
-.social-menu ul li .fab {
-  font-size: 25px;
-  line-height: 60px;
-  transition: 0.6s;
-  color: white;
-}
-.social-menu ul li:nth-child(1) .fab:hover {
-  color: #fff;
-}
-.social-menu ul li:nth-child(2) .fab:hover {
-  color: #fff;
-}
-.social-menu ul li:nth-child(3) .fab:hover {
-  color: white;
-}
-.social-menu ul li:nth-child(4) .fab:hover {
-  color: #fff;
-}
-
-.social-menu ul li a{
-  position: relative;
-  display: block;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: #919090;
-  text-align: center;
-  transition: .6s;
-  box-shadow: 0 5px 4px rgba(0,0,0,0.5);
-}
-
-.social-menu ul li a:hover{
-  transform: translate(0, -10px);
-}
-
-.social-menu ul li:nth-child(1) a:hover{
-  background-color: #3b5999;
-}
-.social-menu ul li:nth-child(2) a:hover{
-  background-color: #e4405f;
-}
-.social-menu ul li:nth-child(3) a:hover{
-  background-color: #FFFC00;
-}
-.social-menu ul li:nth-child(4) a:hover{
-  background-color: #55acee;
-}
 
 /* form */
 
@@ -494,6 +226,82 @@ input:focus{
   font-size:30px;
 }
 
+  /*social media button styles */
+  .socialMedia{
+    position: relative;
+  }
+  .social-menu ul{
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    top: 410px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+
+  }
+  a {
+    text-decoration: inherit;
+    font-weight: 800;
+    color:#919090;
+  }
+
+  .social-menu ul li {
+    list-style: none;
+    margin: 0 12px;
+    }
+    
+.social-menu ul li .fab {
+  font-size: 25px;
+  line-height: 60px;
+  transition: 0.6s;
+  color: white;
+}
+.social-menu ul li:nth-child(1) .fab:hover {
+  color: #fff;
+}
+.social-menu ul li:nth-child(2) .fab:hover {
+  color: #fff;
+}
+.social-menu ul li:nth-child(3) .fab:hover {
+  color: white;
+}
+.social-menu ul li:nth-child(4) .fab:hover {
+  color: #fff;
+}
+
+.social-menu ul li a{
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #919090;
+  text-align: center;
+  transition: .6s;
+  box-shadow: 0 5px 4px rgba(0,0,0,0.5);
+}
+
+.social-menu ul li a:hover{
+  transform: translate(0, -10px);
+}
+
+.social-menu ul li:nth-child(1) a:hover{
+  background-color: #3b5999;
+}
+.social-menu ul li:nth-child(2) a:hover{
+  background-color: #e4405f;
+}
+.social-menu ul li:nth-child(3) a:hover{
+  background-color: #FFFC00;
+}
+.social-menu ul li:nth-child(4) a:hover{
+  background-color: #55acee;
+}
+
+
 .bottomPage{
   position: relative;
   top: 500px;
@@ -506,71 +314,17 @@ input:focus{
   font-size: 15px;
 }
 
-.bottomPage h1{
-  color: var(--background);
-}
-.bottomPage h2{
-  font-size: 20px;
-}
-.bottomPage .fas{
-  color: rgb(218, 87, 87);
-}
-
-.bottomPage input{
-  width:250px;
-  height: 25px;
-  font-size:15px;
-  color: #919090;
-  padding-left: 5px;
-}
-.bottomPage input::-webkit-input-placeholder{
-  color: #919090;
-  font-size: 12px;
-  letter-spacing: 1px;
-}
-.bottomPage button{
-  font-size: 16.5px;
-  background: white;
-  border: 1.5px solid white;
-}
-/* Newsletter pop up */
-
-.swal-overlay {
-  background-color: rgba(0, 0, 0, 0.45);
-}
-
-.swal-title {
-  color: var(--background);
-}
-
-.swal-text {
-  padding: 17px;
-  margin: 22px;
-  text-align: center;
-  color: #919090
-}
-
-.swal-footer {
-  background-color: var(--background);
-  margin-top: 32px;
-  overflow: hidden;
-}
-.swal-button {
-  left: 50%;
-  padding: 15px 40px;
-  border-radius: 60px;
-  background-color: white;
-  font-size: 20px;
-  font-weight: 800;
-  color:var(--background);
-  transition-duration: 200ms;
-}
-
-
 /* iphone 5  */
 @media screen and (max-width: 500px){
   .topText{
+    position: absolute;
+    text-align: center;
+    top:50%;
+    transform: translateY(-50%);
+    width: 100%;
     font-size: 50px;
+    color: white;
+    z-index: 2;  animation: fade-in 3s ease-in;
   }
   .header h1{
     font-size: 40px;
@@ -608,56 +362,6 @@ input:focus{
   .social-menu ul li .fab {
     font-size: 25px;
   }
-  .my_bttn{
-    height: 40px;
-    width: 40px;
-    background-color: var(--background);
-    border: none;
-    color: white;
-    position: fixed;
-    bottom: 5px;
-    right: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    outline: none;
-    display: none;
-    font-size: 20px;
-  }
-  .bottomPage{
-    position: relative;
-    top: 500px;
-    padding-top: 20px;
-    padding-bottom: 50px;
-    padding-left: 10%;
-    width:100%;
-    color:white;
-    background-color: #919090;
-  }
-  
-  .bottomPage h1{
-    color: var(--background);
-  }
-  .bottomPage .fas{
-    color: rgb(218, 87, 87);
-  }
-  
-  .bottomPage input{
-    width:250px;
-    height: 25px;
-    font-size:15px;
-    color: #919090;
-    padding-left: 5px;
-  }
-  .bottomPage input::-webkit-input-placeholder{
-    color: #919090;
-    font-size: 12px;
-    letter-spacing: 1px;
-  }
-  .bottomPage button{
-    font-size: 16.5px;
-    background: white;
-    border: 1.5px solid white;
-  }
 }
 @media screen and (max-width: 320px){
 
@@ -688,12 +392,6 @@ input:focus{
     background: rgba(0,0,0,0);
     color: #919090;
   }
-  .bottomPage input{
-    width:200px;
-    height: 25px;
-    font-size:15px
-  }
-
 }
 
 

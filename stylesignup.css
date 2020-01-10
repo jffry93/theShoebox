@@ -1,45 +1,5 @@
-:root {
-  --background: rgba(218, 87, 87, 0.95);
-}
 
-*,*::before,*::after{
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  /*sign up body styles */
-  font-size: 16px;
-  font-family: "roboto-bold";
-  color: #919090;
-  font-weight: 800;
-  line-height: 1.6;
-  height: 100vh;
-}
-.my_bttn{
-  height: 40px;
-  width: 40px;
-  background-color: var(--background);
-  border: none;
-  color: white;
-  position: fixed;
-  bottom: 41px;
-  right: 30px;
-  border-radius: 5px;
-  cursor: pointer;
-  outline: none;
-  display: none;
-  font-size: 20px;
-  z-index: 1000;
-}
-
-.my_bttn:hover{
-  transform: scale(1.05) translateY(-5px);
-  border: 1px solid var(--background);
-  color: var(--background);
-  background: inherit;
-}
-/* CSS smooth scroll */
+/* background img*/
 .container {
   position: relative;
   width: 100%;
@@ -50,159 +10,6 @@ body {
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
-  
-}
-
-/* navigation styles */
-
-header {
-  background: var(--background);
-  color: white;
-  font-weight: 800px;
-  text-align: center;
-  position: fixed;
-  z-index: 999;
-  width: 100%;
-  top:0;
-  padding: 23px;
-}
-
-.nav-toggle {
-  display: none;
-}
-
-.nav-toggle-label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-left: 1em;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.nav-toggle-label span,
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-  display: block;
-  background: white;
-  height: 2px;
-  width: 2em;
-  border-radius: 2px;
-  position: relative;
-}
-
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-  content: '';
-  position: absolute;
-}
-
-.nav-toggle-label span::before {
-  bottom: 7px;
-}
-.nav-toggle-label span::after {
-  top: 7px;
-}
-
-nav {
-  position: absolute;
-  text-align: left;
-  top: 100%;
-  left: 0;
-  background: var(--background);
-  width: 100%;
-  transform: scale(1,0);
-  transform-origin: top;
-  transition: 400ms ease-in-out;
-}
-
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-/*nav container*/
-nav li {
-  margin-bottom:  1em;
-  margin-left: 1em;
-}
-
-/* nav items font*/
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 800px;
-  padding: 2vh;
-  opacity: 0;
-  transition: opacity 150ms ease-in-out;
-  position: relative;
-  z-index: 1;
-}
-
-nav a:hover {
-  color: #919090;
-  transition: 0.4s;
-}
-
-
-.nav-toggle:checked ~ nav{
-transform: scale(1,1);
-}
-
-.nav-toggle:checked ~ nav a {
-  opacity: 1;
-  transition: opacity 250ms ease-in-out 250ms;
-}
-
-
-/* 
-
-
-IF YOU ARE LOOKING AT THIS ON A LARGER SCREEN 
-
-
-
-
-*/
-
-@media screen and (min-width: 850px) {
-  .nav-toggle-label {
-    display: none;
-  }
-
-  header {
-    display: grid;
-    grid-template-columns: 1fr auto minmax(600px, 1fr) 1fr;
-  }
-
-  .logo {
-    grid-column: 1 / 3;
-    font-family:"roboto-blackitalic"
-  }
-
-  nav {
-    all: unset;
-    grid-column: 3 / 5 ;
-    display:flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 10vh;
-  }
-
-  nav ul {
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  nav li {
-    margin-left: 3em;
-    margin-bottom: 0;
-  }
-
-  nav a {
-    opacity: 1;
-  }
 }
 
   /*sign up styles */
@@ -423,30 +230,6 @@ input[type="number"]{
     line-height: 40px;
     text-align: center;
   }
-  .bottomPage{
-    position: relative;
-    top: -5px;
-    padding-top: 20px;
-    padding-bottom: 50px;
-    padding-left: 10%;
-    width:100%;
-    color:white;
-    background-color: #919090;
-    z-index: 1;
-  }
-  
-  .bottomPage h1{
-    color: var(--background);
-    font-size: 40px;
-    font-weight: 800;
-  }
-  .bottomPage h2{
-    font-size: 25px;
-  }
-  .bottomPage .fas{
-    color: rgb(218, 87, 87);
-  }
-  
   .bottomPage input{
     all:unset;
     width:270px;
@@ -455,16 +238,6 @@ input[type="number"]{
     color: #919090;
     padding-left: 5px;
     background-color: white;
-  }
-  .bottomPage input::-webkit-input-placeholder{
-    color: #919090;
-    font-size: 12px;
-    letter-spacing: 1px;
-  }
-  .bottomPage button{
-    font-size: 16.5px;
-    background: white;
-    border: 1.5px solid white;
   }
 
   /* responsive */
@@ -644,30 +417,6 @@ input[type="number"]{
       width: 150px;
       margin: 0px 10px 0px 10px;
     }
-    .bottomPage{
-      position: relative;
-      top: -5px;
-      padding-top: 20px;
-      padding-bottom: 50px;
-      padding-left: 10%;
-      width:100%;
-      color:white;
-      background-color: #919090;
-      z-index: 1;
-    }
-    
-    .bottomPage h1{
-      color: var(--background);
-      font-size: 30px;
-      font-weight: 800;
-    }
-    .bottomPage h2{
-      font-size: 18px;
-    }
-    .bottomPage .fas{
-      color: rgb(218, 87, 87);
-    }
-    
     .bottomPage input{
       all:unset;
       width:70%;
@@ -676,31 +425,6 @@ input[type="number"]{
       color: #919090;
       padding-left: 5px;
       background-color: white;
-    }
-    .bottomPage input::-webkit-input-placeholder{
-      color: #919090;
-      font-size: 12px;
-      letter-spacing: 1px;
-    }
-    .bottomPage button{
-      font-size: 16.5px;
-      background: white;
-      border: 1.5px solid white;
-    }
-    .my_bttn{
-      height: 40px;
-      width: 40px;
-      background-color: var(--background);
-      border: none;
-      color: white;
-      position: fixed;
-      bottom: 5px;
-      right: 5px;
-      border-radius: 5px;
-      cursor: pointer;
-      outline: none;
-      display: none;
-      font-size: 20px;
     }
   }
   @media screen and (max-width: 400px){

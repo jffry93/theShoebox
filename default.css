@@ -148,7 +148,6 @@
     transition: opacity 250ms ease-in-out 250ms;
   }
   
-  
   /* 
   
   
@@ -202,7 +201,7 @@
   /* sign up button */
 .bottomPage{
     position: relative;
-    top: 00px;
+    bottom: 0px;
     padding-top: 20px;
     padding-bottom: 50px;
     padding-left: 10%;
@@ -242,10 +241,51 @@
     background: white;
     border: 1.5px solid white;
   }
+
+
+  /* input box when selected */
+
+  input:focus{
+    outline: 2px solid rgb(218, 87, 87);
+  }
+
+  /* Newsletter pop up */
+
+.swal-overlay {
+    background-color: rgba(0, 0, 0, 0.45);
+  }
+  
+  .swal-title {
+    color: var(--background);
+  }
+  
+  .swal-text {
+    padding: 17px;
+    margin: 22px;
+    text-align: center;
+    color: #919090
+  }
+  
+  .swal-footer {
+    background-color: var(--background);
+    margin-top: 32px;
+    overflow: hidden;
+  }
+  .swal-button {
+    left: 50%;
+    padding: 15px 40px;
+    border-radius: 60px;
+    background-color: white;
+    font-size: 20px;
+    font-weight: 800;
+    color:var(--background);
+    transition-duration: 200ms;
+  }
+  
   @media screen and (max-width: 500px){
     .bottomPage{
       position: relative;
-      top: 00px;
+      bottom: 00px;
       padding-top: 20px;
       padding-bottom: 50px;
       padding-left: 5%;
@@ -283,6 +323,9 @@
       background: white;
       border: 1.5px solid white;
     }
+
+    /*back to top button */
+    
     .my_bttn{
       height: 40px;
       width: 40px;
