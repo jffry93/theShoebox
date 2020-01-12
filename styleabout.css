@@ -104,27 +104,27 @@
 @keyframes slide1{
   16%{
     background:url(images/aboutusimg.jpeg);
-    background-size: cover ;
+    background-size: cover;
     background-position: center center;
   }
   33%{
     background:url(images/aboutusimg3.jpeg);
-    background-size: cover ;
+    background-size: cover;
     background-position: center center;
   }
   49%{
     background:url(images/aboutusimg3.jpeg);
-    background-size: cover ;
+    background-size: cover;
     background-position: center center;
   }
   66%{
     background:url(images/aboutusimg2.jpeg);
-    background-size: cover ;
+    background-size: cover;
     background-position: center center;
   }
   82%{
     background:url(images/aboutusimg2.jpeg);
-    background-size: cover ;
+    background-size: cover;
     background-position: center center;
   }
 

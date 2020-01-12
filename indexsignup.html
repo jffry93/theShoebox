@@ -13,7 +13,7 @@
     <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="scriptsignup.js"></script>
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -122,13 +122,13 @@
             <h2>Be the first to know about new products, news and promotions.</h2>
             <form id="newsLetter">
                 <input type="email" id="subscribebtn" placeholder="Your Email">
-                <button type="submit" onclick="validation();"><i class="fas fa-arrow-right"></i></button>
+                <button type="submit" onclick="footer();"><i class="fas fa-arrow-right"></i></button>
             </form>
     
             <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
             <script>
     
-                function validation() {
+                function footer() {
     
                     var subscribeBtn = document.getElementById("subscribebtn").value;
     

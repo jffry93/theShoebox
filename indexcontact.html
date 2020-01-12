@@ -13,7 +13,7 @@
     <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="scriptcontact.js"></script>
+    <script src="script.js"></script>
 
 </head>
 
@@ -113,73 +113,75 @@
         </div>
         <div class="corporateOffice">
             <h1> Corporate Office</h1>
-            <a href="#"><i class="fas fa-map-marker-alt"></i>75 Adelaide Street West<br> Toronto, On M5V 1S4</a>
+            <a href="https://www.google.com/maps/place/75+Adelaide+St+W,+Toronto,+ON+M5V+1S4/@43.6465473,-79.3981901,17z/data=!3m1!4b1!4m5!3m4!1s0x882b34dbe99df33f:0x3542fbd31cae685f!8m2!3d43.6465473!4d-79.3960014"
+                target="_blank"><i class="fas fa-map-marker-alt"></i>75 Adelaide Street West<br> Toronto, On M5V 1S4</a>
         </div class="socialMedia">
         <h1>
             <h1 class="connect">Connect With Us</h1>
             <div class="social-menu">
                 <ul>
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-snapchat-ghost"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.snapchat.com/l/en-gb/" target="_blank"><i
+                                class="fab fa-snapchat-ghost"></i></a></li>
+                    <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
                 </ul>
             </div>
         </h1>
-    </h1>
-    <div class="bottomPage">
-        <h1> Sign Me Up</h1>
-        <h2>Be the first to know about new products, news and promotions.</h2>
-        <form id="newsLetter">
-            <input type="email" id="subscribebtn" placeholder="Your Email">
-            <button type="submit" onclick="validation();"><i class="fas fa-arrow-right"></i></button>
-        </form>
+        </h1>
+        <div class="bottomPage">
+            <h1> Sign Me Up</h1>
+            <h2>Be the first to know about new products, news and promotions.</h2>
+            <form id="newsLetter">
+                <input type="email" id="subscribebtn" placeholder="Your Email">
+                <button type="submit" onclick="footer();"><i class="fas fa-arrow-right"></i></button>
+            </form>
 
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-        <script>
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+            <script>
 
-            function validation() {
+                function footer() {
 
-                var subscribeBtn = document.getElementById("subscribebtn").value;
+                    var subscribeBtn = document.getElementById("subscribebtn").value;
 
-                if (subscribeBtn.includes('@' && '.com')) {
-                    swal({
-                        title: "Awesome!",
-                        text: "Welcome to the family!",
-                        icon: "success",
-                        button: "Continue",
-                    });
-                } else {
-                    swal({
-                        title: "Ooooops...",
-                        text: "you messed up!",
-                        icon: "error",
-                        button: "try again",
-                    });
+                    if (subscribeBtn.includes('@' && '.com')) {
+                        swal({
+                            title: "Awesome!",
+                            text: "Welcome to the family!",
+                            icon: "success",
+                            button: "Continue",
+                        });
+                    } else {
+                        swal({
+                            title: "Ooooops...",
+                            text: "you messed up!",
+                            icon: "error",
+                            button: "try again",
+                        });
+                    }
                 }
-            }
-            const newsLetter = document.getElementById("newsLetter");
+                const newsLetter = document.getElementById("newsLetter");
 
-            newsLetter.addEventListener("submit", (e) => {
-                e.preventDefault();
+                newsLetter.addEventListener("submit", (e) => {
+                    e.preventDefault();
+                });
+
+
+
+            </script>
+
+        </div>
+
+
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                offset: 400,
+                duration: 1000,
+                once: true,
             });
-
-
-
         </script>
-
-    </div>
-
-
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            offset: 400,
-            duration: 1000,
-            once: true,
-        });
-    </script>
 
 </body>
 

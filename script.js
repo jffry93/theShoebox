@@ -1,3 +1,4 @@
+/* back top button */
 
 $(document).ready(function () {
     $(window).scroll(function () {
@@ -14,5 +15,6 @@ $(document).ready(function () {
         );
     })
 });
+
 
 
