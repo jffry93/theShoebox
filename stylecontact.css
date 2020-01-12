@@ -254,6 +254,9 @@ input:focus{
     }
     
 .social-menu ul li .fab {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 25px;
   line-height: 60px;
   transition: 0.6s;
@@ -313,7 +316,18 @@ input:focus{
   background-color: #919090;
   font-size: 15px;
 }
-
+@media screen and (max-width: 1000px){
+  .topText{
+    position: absolute;
+    text-align: center;
+    top:40%;
+    transform: translateY(-50%);
+    width: 100%;
+    font-size: 70px;
+    color: white;
+    z-index: 2;  animation: fade-in 3s ease-in;
+  }
+}
 /* iphone 5  */
 @media screen and (max-width: 500px){
   .topText{

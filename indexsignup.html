@@ -44,43 +44,43 @@
                 <div class="left-box">
                     <h1> Sign up with your email address</h1>
                     <p> Create an account and start receiving new shoes every month</p>
-                    <form>
+                    <form id="enrollForm">
 
                         <div/div action="#" method="GET">
                             <div>
-                                <input type="email" name="email" placeholder="*Email" required/>
+                                <input type="email" name="email" placeholder="*Email" required />
                             </div>
                             <div>
-                                <input type="email" name="email1" placeholder="*Confirm email" required/>
+                                <input type="email" name="email1" placeholder="*Confirm email" required />
                             </div>
                             <div>
-                                <input type="text" name="nickname" placeholder="*What should we call you?" required/>
+                                <input type="text" name="nickname" placeholder="*What should we call you?" required />
                             </div>
                             <div>
-                                <input type="password" name="password" placeholder="*Password" required/>
+                                <input type="password" name="password" placeholder="*Password" required />
                             </div>
                             <div>
-                                <input type="password" name="password2" placeholder="*Retype password" required/>
+                                <input type="password" name="password2" placeholder="*Retype password" required />
                             </div>
-                                <p class="dateofbirth">Date of birth</p>
+                            <p class="dateofbirth">Date of birth</p>
                             <div class="birthday">
                                 <input type="number" name="day" placeholder="Day" min="1" max="31" required>
                                 <div class="custom-select" style="width:200px;">
-                                <select required>
-                                    <option value="">Month</option>
-                                    <option value="january">January</option>
-                                    <option value="february">February</option>
-                                    <option value="march">March</option>
-                                    <option value="april">April</option>
-                                    <option value="may">May</option>
-                                    <option value="june">June</option>
-                                    <option value="july">July</option>
-                                    <option value="august">August</option>
-                                    <option value="september">September</option>
-                                    <option value="october">October</option>
-                                    <option value="november">November</option>
-                                    <option value="december">December</option>
-                                </select>
+                                    <select required>
+                                        <option value="">Month</option>
+                                        <option value="january">January</option>
+                                        <option value="february">February</option>
+                                        <option value="march">March</option>
+                                        <option value="april">April</option>
+                                        <option value="may">May</option>
+                                        <option value="june">June</option>
+                                        <option value="july">July</option>
+                                        <option value="august">August</option>
+                                        <option value="september">September</option>
+                                        <option value="october">October</option>
+                                        <option value="november">November</option>
+                                        <option value="december">December</option>
+                                    </select>
                                 </div>
                                 <input type="number" name="year" placeholder="Year" min="1900" max="2005" required>
                             </div>
@@ -100,9 +100,18 @@
                                 <label for="agree"> I agree to the ShoeBox. terms & conditions and Privacy
                                     policy</label>
                             </div>
-                            <input type="submit" name="signup-button" value="Sign Up" />
+                            <input type="submit" onclick="enroll();" name="signup-button" value="Sign Up" />
                         </div>
                     </form>
+                    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+                    <script>
+
+                        const newsLetter = document.getElementById("enrollForm");
+
+                        newsLetter.addEventListener("submit", (e) => {
+                            e.preventDefault();
+                        });
+                    </script>
                 </div>
 
                 <div class="right-box">
@@ -124,14 +133,14 @@
                 <input type="email" id="subscribebtn" placeholder="Your Email">
                 <button type="submit" onclick="footer();"><i class="fas fa-arrow-right"></i></button>
             </form>
-    
+
             <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
             <script>
-    
+
                 function footer() {
-    
+
                     var subscribeBtn = document.getElementById("subscribebtn").value;
-    
+
                     if (subscribeBtn.includes('@' && '.com')) {
                         swal({
                             title: "Awesome!",
@@ -149,15 +158,15 @@
                     }
                 }
                 const newsLetter = document.getElementById("newsLetter");
-    
+
                 newsLetter.addEventListener("submit", (e) => {
                     e.preventDefault();
                 });
-    
-    
-    
+
+
+
             </script>
-    
+
         </div>
 </body>
 

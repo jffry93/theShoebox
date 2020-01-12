@@ -378,7 +378,7 @@ background-position: center;
   }
 
 }
-@media screen and (max-width: 800px){
+@media screen and (max-width: 1000px){
   #topImg h1{
     font-size: 70px;
   }

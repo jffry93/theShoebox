@@ -199,7 +199,7 @@ input[type="number"]{
     border:none;
     border-radius: 2px;
     color: white;
-    font-size: 15px;
+    font-size: 25px;
     font-weight: 800px;
     transition: 0.2s ease;
     cursor: pointer;
@@ -312,8 +312,8 @@ input[type="number"]{
       border:none;
       border-radius: 2px;
       color: white;
-      font-size: 15px;
-      font-weight: 800px;
+      font-size: 25px;
+      font-weight: 800;
       transition: 0.2s ease;
       cursor: pointer;
     }
@@ -384,7 +384,7 @@ input[type="number"]{
       border:none;
       border-radius: 2px;
       color: white;
-      font-size: 15px;
+      font-size: 20px;
       font-weight: 800px;
       transition: 0.2s ease;
       cursor: pointer;

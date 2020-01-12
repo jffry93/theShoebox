@@ -207,10 +207,12 @@ input[name="r"]{
   color:#919090;
 }
 .final{
+  display: flex;
+  flex-direction: column;
   position: relative;
   top: 30px;
+  height: 400px;
   text-align: center;
-  height: 500px;
   background-color: var(--background);
 }
 
@@ -596,19 +598,52 @@ input[name="r"]{
 
 /* slideshow at the bottom of the page */
 .finalText{
-  position: absolute;
-  top: -20px;
+  position: relative;
+  top: 20%;
+  transform: translateY(-50%);
+  padding: 30px 15px 0px 15px;
+  margin: 0;
   text-align: center;
-  padding-top: 90px;
-  padding-bottom: 200px;
-  font-size: 60px;
+  font-size: 50px;
   font-weight: 800;
-  height: 200px;
   width: 100%;
   color: white;
-  background:rgba(black, black, black, 50%);
-  position: relative;
   z-index: 1; 
+}
+/* sign up button */
+a{
+  text-decoration: inherit;
+  text-align: center;
+  color:var(--background)
+}
+.signup-box{
+  position: relative;
+  text-align: center;
+  width: 100%;
+  bottom:-50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.signup-bttn {
+  position: relative;
+  top: 0%;
+  right: 0%;
+  transform: translateX(-50%);
+  font-weight: 800;
+  font-size: 50px;
+  color:var(--background);
+  background-color: white;
+  border-radius: 60px;
+  padding: 25px 60px;
+  z-index: 2;
+
+  transition-duration: 200ms;
+}
+
+.signup-bttn:hover{
+  background-color:var(--background);
+  color: white;
+  border: 2px solid white;
 }
 
 .finalContainer{
@@ -674,41 +709,6 @@ input[name="r"]{
 }
 
 
-
-
-/* sign up button */
-.signup-bttn-container{
-  position: absolute;
-  width: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-a{
-  text-decoration: inherit;
-  text-align: center;
-  color:var(--background)
-}
-
-.signup-bttn {
-  position: relative;
-  top: -50px;
-  transform: translate(0, 60%);
-  font-weight: 800;
-  font-size: 50px;
-  color:var(--background);
-  background-color: white;
-  border-radius: 60px;
-  padding: 25px 80px;
-  z-index: 2;
-  transition-duration: 200ms;
-}
-
-.signup-bttn:hover{
-  background-color:var(--background);
-  color: white;
-  border: 2px solid white;
-}
-
 /* Newsletter notification */
 
 .swal-overlay {
@@ -744,6 +744,20 @@ a{
 
 /* change direction of type and style container */
 @media screen and (max-width: 1000px){
+  .slide h1{
+    position: absolute;
+    text-align: center;
+    top: 45%;
+    width: 100%;
+    transform: translateY(-50%);
+    font-size: 70px;
+    font-weight: 800;
+    color: var(--background);
+    z-index: 100;
+    padding-left: 5%;
+    padding-right: 5%;
+    z-index: 2;  animation: fade-in 3s ease-in;
+  }
   .typeContainer {
     display:flex;
     flex-direction: column;
@@ -867,23 +881,21 @@ Changed font sizes and minor adjustments to accomodate the smaller size screen
   }
   .finalText{
     position: relative;
-    top: -20px;
+    top: 25%;
+    transform: translateY(-50%);
+    padding: 30px 15px 0px 15px;
+    margin: 0;
     text-align: center;
-    padding-top: 60px;
-    padding-bottom: 200px;
     font-size: 30px;
     font-weight: 800;
-    height: 200px;
     width: 100%;
     color: white;
-    background:rgba(black, black, black, 50%);
-    position: relative;
-    z-index: 1;
+    z-index: 1; 
   }
   .signup-bttn {
     position: relative;
-    top: -100px;
-    transform: translate(0, 60%);
+    top: 30%;
+    transform: translateY(-50%);
     font-weight: 800;
     font-size: 25px;
     color:var(--background);
@@ -898,7 +910,7 @@ Changed font sizes and minor adjustments to accomodate the smaller size screen
     position: relative;
     top: 20px;
     text-align: center;
-    height: 320px;
+    height: 300px;
     background-color: var(--background);
   }
   .shoeMeasurement{
