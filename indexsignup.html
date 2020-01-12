@@ -44,29 +44,29 @@
                 <div class="left-box">
                     <h1> Sign up with your email address</h1>
                     <p> Create an account and start receiving new shoes every month</p>
-                    <form id="enrollForm">
-
+                    <div id="error"></div>
+                    <form id="enrollForm" action="/" method="GET">
                         <div/div action="#" method="GET">
                             <div>
-                                <input type="email" name="email" placeholder="*Email" required />
+                                <input id="email" type="email" name="email" placeholder="*Email" />
                             </div>
                             <div>
-                                <input type="email" name="email1" placeholder="*Confirm email" required />
+                                <input id="email2" type="email" name="email1" placeholder="*Confirm email" />
                             </div>
                             <div>
-                                <input type="text" name="nickname" placeholder="*What should we call you?" required />
+                                <input id="name" type="text" name="nickname" placeholder="*What should we call you?" />
                             </div>
                             <div>
-                                <input type="password" name="password" placeholder="*Password" required />
+                                <input id="password" type="password" name="password" placeholder="*Password" />
                             </div>
                             <div>
-                                <input type="password" name="password2" placeholder="*Retype password" required />
+                                <input id="password2" type="password" name="password2" placeholder="*Retype password" />
                             </div>
                             <p class="dateofbirth">Date of birth</p>
                             <div class="birthday">
-                                <input type="number" name="day" placeholder="Day" min="1" max="31" required>
+                                <input id="day" type="number" name="day" placeholder="Day" min="1" max="31">
                                 <div class="custom-select" style="width:200px;">
-                                    <select required>
+                                    <select id="month">
                                         <option value="">Month</option>
                                         <option value="january">January</option>
                                         <option value="february">February</option>
@@ -82,11 +82,11 @@
                                         <option value="december">December</option>
                                     </select>
                                 </div>
-                                <input type="number" name="year" placeholder="Year" min="1900" max="2005" required>
+                                <input id="year" type="number" name="year" placeholder="Year" min="1900" max="2005">
                             </div>
                             <div class="radio">
                                 <label for="male">Male</label>
-                                <input type="radio" name="gender" id="male" value="male" required>
+                                <input type="radio" name="gender" id="male" value="male">
                                 <label for="female">Female</label>
                                 <input type="radio" name="gender" id="female" value="female">
                                 <label for="non-binary">Non-binary</label>
@@ -95,17 +95,74 @@
                             <div id="warning">
                                 <p> We may send you emails with news or promotions occasionally</p>
                             </div>
-                            <div class="agree">
-                                <input type="checkbox" name="agree" required>
-                                <label for="agree"> I agree to the ShoeBox. terms & conditions and Privacy
+                            <a class="agree">
+                                <input id="checkbox" type="checkbox" name="agree">
+                                <label for="agree"> I agree to TheShoeBox. terms & conditions and Privacy
                                     policy</label>
-                            </div>
+                            </a>
+                            <div class="signup-container">
                             <input type="submit" onclick="enroll();" name="signup-button" value="Sign Up" />
+                            </div>
                         </div>
                     </form>
                     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
                     <script>
+                        const emailVar = document.getElementById('email')
+                        const emailVar2 = document.getElementById('email2')
+                        const nameVar = document.getElementById('name')
+                        const passwordVar = document.getElementById('password')
+                        const passwordVar2 = document.getElementById('password2')
+                        const dayVar = document.getElementById('day')
+                        const monthVar = document.getElementById('month')
+                        const yearVar = document.getElementById('year')
+                        const checkboxVar = document.getElementById('checkbox')
 
+                        const formVar = document.getElementById('enrollForm')
+                        const errorElement = document.getElementById('error')
+
+                        enrollForm.addEventListener('submit', (e) => {
+                            let messages = []
+                            if (emailVar.value.includes('@' && '.com')) { } else {
+                                messages.push('Email is required')
+                            }
+                            if (emailVar2.value === emailVar.value) { } else {
+                                messages.push('Emails must match')
+                            }
+                            if (nameVar.value === '' || nameVar.value == null) {
+                                messages.push('Name is required')
+                            }
+                            if (passwordVar.value.length <= 6) {
+                                messages.push('Password must be longer than 6 characters')
+                            }
+                            if (passwordVar2.value === passwordVar.value) { } else {
+                                messages.push('Passwords must match')
+                            }
+                            if (dayVar.value == '' || dayVar.value == null) {
+                                messages.push('Date of birth is required')
+                            }
+                            if (monthVar.value === "") {
+                                messages.push('Month of birth is required')
+                            }
+                            if (yearVar.value == '' || yearVar.value == null) {
+                                messages.push('Year of birth is required')
+                            }
+                            if (checkboxVar.checked == 1) { } else {
+                                messages.push("Please agree with our terms & conditions.")
+                            }
+
+                            if (messages.length > 0) {
+                                e.preventDefault()
+                                errorElement.innerText = messages.join(', ')
+                            } else {
+                                swal({
+                                    title: "Welcome to the family!",
+                                    text: "Please check your email and follow the steps to complete sign up",
+                                    icon: "success",
+                                    button: "Continue",
+                                });
+
+                            }
+                        })
                         const newsLetter = document.getElementById("enrollForm");
 
                         newsLetter.addEventListener("submit", (e) => {
