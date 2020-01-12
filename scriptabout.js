@@ -3,13 +3,13 @@
 $(document).ready(function () {
     $(window).scroll(function () {
         if ($(window).scrollTop() > 300) {
-            $('.my_bttn').fadeIn(250);
+            $('.top-bttn').fadeIn(250);
         }
         else {
-            $('.my_bttn').fadeOut(250);
+            $('.top-bttn').fadeOut(250);
         }
     });
-    $('.my_bttn').click(function () {
+    $('.top-bttn').click(function () {
         $('html,body').animate(
             { scrollTop: 0 }, 400
         );

@@ -7,7 +7,7 @@
     box-sizing: border-box;
   }
   /* back to top button */
-  .my_bttn{
+  .top-bttn{
     height: 40px;
     width: 40px;
     background-color: var(--background);
@@ -24,7 +24,7 @@
     z-index: 1000;
   }
   
-  .my_bttn:hover{
+  .top-bttn:hover{
     transform: scale(1.05) translateY(-5px);
     border: 1px solid var(--background);
     color: var(--background);
@@ -326,7 +326,7 @@
 
     /*back to top button */
     
-    .my_bttn{
+    .top-bttn{
       height: 40px;
       width: 40px;
       background-color: var(--background);
