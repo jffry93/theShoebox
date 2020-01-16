@@ -1,4 +1,4 @@
-/* back top button */
+// back to top bottom
 
 $(document).ready(function () {
     $(window).scroll(function () {
