@@ -596,7 +596,7 @@ input[name="r"]{
 /* slideshow at the bottom of the page */
 .finalText{
   position: relative;
-  top: 20%;
+  top: 50%;
   transform: translateY(-50%);
   padding: 30px 15px 0px 15px;
   margin: 0;
@@ -617,7 +617,7 @@ a{
   position: relative;
   text-align: center;
   width: 100%;
-  bottom:-50px;
+  bottom:-50%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -844,6 +844,31 @@ a{
 
 
 /* 
+/* change direction of type and style container */
+@media screen and (max-width: 910px){
+  .finalText{
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+    padding: 30px 15px 0px 15px;
+    margin: 0;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 800;
+    width: 100%;
+    color: white;
+    z-index: 1; 
+  }
+  .signup-box{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    bottom:-10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+}
 
 For smartphone sized devices
 
