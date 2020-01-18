@@ -947,7 +947,7 @@ Changed font sizes and minor adjustments to accomodate the smaller size screen*/
     padding: 20px;
   }
   .measureContent h1{
-    font-size: 40px;
+    font-size: 35px;
     position: absolute;
     right: 5px;
     width: 100%;
@@ -1022,10 +1022,3 @@ Changed font sizes and minor adjustments to accomodate the smaller size screen*/
     visibility: hidden;
   }
 }
-
-
-
-
-
-
-
