@@ -1,6 +1,8 @@
-var random = document.getElementsByClassName("originyear");
+let upper = 2020;
+let lower = 1993;
 
-var random = Math.floor(Math.random() * 27) + 1993;
+let random = Math.floor(Math.random() * (upper - lower + 1) + lower)
 
-console.log(random)
+console.log(random);
 
+document.getElementById('originyear').innerHTML = random;
