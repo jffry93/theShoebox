@@ -13,7 +13,7 @@ function footer() {
     } else {
         swal({
             title: "Ooooops...",
-            text: "you messed up!",
+            text: "Please enter your e-mail address",
             icon: "error",
             button: "try again",
         });
