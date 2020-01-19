@@ -657,7 +657,7 @@ a{
   z-index: 1;
 }
 @keyframes slide{
-  10%{
+  15%{
     background: url(images/final1.jpeg);
     background-size: cover;
     background-position: center center;
@@ -667,7 +667,7 @@ a{
     background-size: cover;
     background-position: center center;
   }
-  30%{
+  35%{
     background:url(images/final2.jpeg);
     background-size: cover;
     background-position: center center;
@@ -677,7 +677,7 @@ a{
     background-size: cover;
     background-position: center center;
   }
-  50%{
+  55%{
     background:url(images/final3.jpeg);
     background-size: cover;
     background-position: center center;
@@ -687,7 +687,7 @@ a{
     background-size: cover;
     background-position: center center;
   }
-  70%{
+  75%{
     background:url(images/casualwar.jpeg);
     background-size: cover;
     background-position: center center;
@@ -697,7 +697,7 @@ a{
     background-size: cover;
     background-position: center center;
   }
-  90%{
+  95%{
     background:url(images/final5.jpeg);
     background-size: cover;
     background-position: center center;

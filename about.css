@@ -102,7 +102,7 @@
   z-index: 1;
 }
 @keyframes slide1{
-  16%{
+  27%{
     background:url(images/aboutusimg.jpeg);
     background-size: cover;
     background-position: center center;
@@ -112,7 +112,7 @@
     background-size: cover;
     background-position: center center;
   }
-  49%{
+  61%{
     background:url(images/aboutusimg3.jpeg);
     background-size: cover;
     background-position: center center;
@@ -122,7 +122,7 @@
     background-size: cover;
     background-position: center center;
   }
-  82%{
+  95%{
     background:url(images/aboutusimg2.jpeg);
     background-size: cover;
     background-position: center center;
@@ -173,7 +173,7 @@
   z-index: -1;
 }
 @keyframes slide{
-  10%{
+  15%{
     background:url(images/poverty1.jpeg);
     background-size: cover;
     background-position: center center;
@@ -183,7 +183,7 @@
     background-size: cover;
     background-position: center center;
   }
-  30%{
+  35%{
     background:url(images/poverty2.jpeg);
     background-size: cover;
     background-position: center center;
@@ -193,7 +193,7 @@
     background-size: cover;
     background-position: center center;
   }
-  50%{
+  55%{
     background:url(images/poverty3.jpeg);
     background-size: cover;
     background-position: center center;
@@ -203,7 +203,7 @@
     background-size: cover;
     background-position: center center;
   }
-  70%{
+  75%{
     background:url(images/poverty4.jpeg);
     background-size: cover;
     background-position: center center;
@@ -213,7 +213,7 @@
     background-size: cover;
     background-position: center center;
   }
-  90%{
+  95%{
     background:url(images/poverty5.jpeg);
     background-size: cover;
     background-position: center center;
