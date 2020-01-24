@@ -1,154 +1,154 @@
 :root {
-    --background: rgba(218, 87, 87, 0.95);
-    --overlay: rgba(0, 0, 0, 0.3);
-  }
-  
-  *,*::before,*::after{
-    box-sizing: border-box;
-  }
-  /* back to top button */
-  .top-bttn{
-    height: 40px;
-    width: 40px;
-    background-color: var(--background);
-    border: none;
-    color: white;
-    position: fixed;
-    bottom: 41px;
-    right: 50px;
-    border-radius: 5px;
-    cursor: pointer;
-    outline: none;
-    display: none;
-    font-size: 20px;
-    z-index: 1000;
-  }
-  
-  .top-bttn:hover{
-    transform: scale(1.05) translateY(-5px);
-    border: 1px solid var(--background);
-    color: var(--background);
-    background: inherit;
-  }
-  body {
-    margin: 0;
-    background: white;
-    /*sign up body styles */
-    font-size: 16px;
-    color: #919090;
-    line-height: 1.6;
-    height: 100vh;
-    font-family:"roboto-bold";
-  
-  }
-  /*fonts*/
-  .logo{
-    font-family:"roboto-BlackItalic";
-  }
-  
-  /* navigation styles */
-  
-  header {
-    background: var(--background);
-    color: white;
-    font-weight: 800;
-    text-align: center;
-    position: fixed;
-    z-index: 999;
-    width: 100%;
-    top:0;
-    padding: 15px;
-  }
-  
-  .nav-toggle {
-    display: none;
-  }
-  
-  .nav-toggle-label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-left: 1em;
-    height: 100%;
-    display: flex;
-    align-items: center;
-  }
-  
-  .nav-toggle-label span,
-  .nav-toggle-label span::before,
-  .nav-toggle-label span::after {
-    display: block;
-    background: white;
-    height: 2.5px;
-    width: 2em;
-    border-radius: 2.5px;
-    position: relative;
-  }
-  
-  .nav-toggle-label span::before,
-  .nav-toggle-label span::after {
-    content: '';
-    position: absolute;
-  }
-  
-  .nav-toggle-label span::before {
-    bottom: 7px;
-  }
-  .nav-toggle-label span::after {
-    top: 6px;
-  }
-  
-  nav {
-    position: absolute;
-    text-align: left;
-    top: 100%;
-    left: 0;
-    background: var(--background);
-    width: 100%;
-    transform: scale(1,0);
-    transform-origin: top;
-    transition: 400ms ease-in-out;
-  }
-  
-  nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  /*nav container*/
-  nav li {
-    margin-bottom: 1.5em;
-    margin-left: 1em;
-  }
-  
-  /* nav items font*/
-  nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 800px;
-    padding: 2vh;
-    opacity: 0;
-    transition: opacity 150ms ease-in-out;
-    position: relative;
-    z-index: 1;
-  }
-  
-  nav a:hover {
-    color: #919090;
-    transition: 0.4s;
-  }
-  
-  
-  .nav-toggle:checked ~ nav{
-  transform: scale(1,1);
-  }
-  
-  .nav-toggle:checked ~ nav a {
-    opacity: 1;
-    transition: opacity 250ms ease-in-out 250ms;
-  }
-  
-  /* 
+  --background: rgba(218, 87, 87, 0.95);
+  --overlay: rgba(0, 0, 0, 0.3);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* back to top button */
+.top-bttn {
+  height: 40px;
+  width: 40px;
+  background-color: var(--background);
+  border: none;
+  color: white;
+  position: fixed;
+  bottom: 41px;
+  right: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  display: none;
+  font-size: 20px;
+  z-index: 1000;
+}
+
+.top-bttn:hover {
+  transform: scale(1.05) translateY(-5px);
+  border: 1px solid var(--background);
+  color: var(--background);
+  background: inherit;
+}
+body {
+  margin: 0;
+  background: white;
+  /*sign up body styles */
+  font-size: 16px;
+  color: #919090;
+  line-height: 1.6;
+  height: 100vh;
+  font-family: 'roboto-bold';
+}
+/*fonts*/
+.logo {
+  font-family: 'roboto-BlackItalic';
+}
+
+/* navigation styles */
+
+header {
+  background: var(--background);
+  color: white;
+  font-weight: 800;
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  top: 0;
+  padding: 15px;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2.5px;
+  width: 2em;
+  border-radius: 2.5px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+.nav-toggle-label span::after {
+  top: 6px;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--background);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/*nav container*/
+nav li {
+  margin-bottom: 1.5em;
+  margin-left: 1em;
+}
+
+/* nav items font*/
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 800px;
+  padding: 2vh;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+nav a:hover {
+  color: #919090;
+  transition: 0.4s;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+/* 
   
   
   IF YOU ARE LOOKING AT THIS ON A LARGER SCREEN 
@@ -157,205 +157,205 @@
   
   
   */
-  
-  @media screen and (min-width: 1000px) {
-    .nav-toggle-label {
-      display: none;
-    }
-  
-    header {
-      display: grid;
-      grid-template-columns: 1fr auto minmax(600px, 1fr) 1fr;
-    }
-  
-    .logo {
-      grid-column: 1 / 3;
-      padding-left: 80px;
-    }
-  
-    nav {
-      all: unset;
-      grid-column: 3 / 5 ;
-      display:flex;
-      justify-content: flex-end;
-      align-items: center;
-      padding-right: 30px;
-    }
-  
-    nav ul {
-      display: flex;
-      justify-content: flex-end;
-    }
-  
-    nav li {
-      margin-left: 3em;
-      margin-bottom: 0;
-    }
-    nav li:nth-child(4){
-      padding-right:50px;
-    }
-  
-    nav a {
-      opacity: 1;
-    }
+
+@media screen and (min-width: 1000px) {
+  .nav-toggle-label {
+    display: none;
   }
 
-  /* bottom page (sign up for newsletter)
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 1fr) 1fr;
+  }
+
+  .logo {
+    font-family: 'roboto-BlackItalic';
+    grid-column: 1 / 3;
+    padding-left: 80px;
+  }
+
+  nav {
+    all: unset;
+    grid-column: 3 / 5;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 30px;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+  nav li:nth-child(4) {
+    padding-right: 50px;
+  }
+
+  nav a {
+    opacity: 1;
+  }
+}
+
+/* bottom page (sign up for newsletter)
   
   sign up button */
-.bottomPage{
+.bottomPage {
+  position: relative;
+  bottom: 0px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 100%;
+  color: white;
+  background-color: #919090;
+  z-index: 1;
+}
+
+.bottomPage h1 {
+  color: var(--background);
+  font-size: 40px;
+  font-weight: 800;
+}
+.bottomPage h2 {
+  font-size: 25px;
+}
+.bottomPage .fas {
+  color: rgb(218, 87, 87);
+}
+
+.bottomPage input {
+  width: 350px;
+  height: 25px;
+  font-size: 15px;
+  color: #919090;
+  padding-left: 5px;
+}
+.bottomPage input::-webkit-input-placeholder {
+  color: #919090;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.bottomPage button {
+  font-size: 16.18px;
+  top: 50%;
+  transform: translateY(1.5%);
+  background: white;
+  border: 1.5px solid white;
+}
+
+/* input box when selected */
+
+input:focus {
+  outline: 2px solid rgb(218, 87, 87);
+}
+
+/* Newsletter pop up */
+
+.swal-overlay {
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+.swal-title {
+  color: var(--background);
+}
+
+.swal-text {
+  padding: 17px;
+  margin: 22px;
+  text-align: center;
+  color: #919090;
+}
+
+.swal-footer {
+  background-color: var(--background);
+  margin-top: 32px;
+  overflow: hidden;
+}
+.swal-button {
+  left: 50%;
+  padding: 15px 40px;
+  border-radius: 60px;
+  background-color: white;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--background);
+  transition-duration: 200ms;
+}
+.swal-button:hover {
+  all: none;
+  left: 50%;
+  padding: 15px 40px;
+  border-radius: 60px;
+  background-color: var(--background);
+  font-size: 20px;
+  font-weight: 800;
+  color: white;
+  transition-duration: 200ms;
+}
+
+@media screen and (max-width: 500px) {
+  .bottomPage {
     position: relative;
-    bottom: 0px;
+    bottom: 00px;
     padding-top: 20px;
     padding-bottom: 50px;
-    padding-left: 10%;
-    padding-right: 10%;
-    width:100%;
-    color:white;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 100%;
+    color: white;
     background-color: #919090;
-    z-index: 1;
+    z-index: -1;
   }
-  
-  .bottomPage h1{
+
+  .bottomPage h1 {
     color: var(--background);
-    font-size: 40px;
-    font-weight: 800;
   }
-  .bottomPage h2{
-    font-size: 25px;
+  .bottomPage h2 {
+    font-size: 18px;
   }
-  .bottomPage .fas{
+  .bottomPage .fas {
     color: rgb(218, 87, 87);
   }
-  
-  .bottomPage input{
-    width:350px;
+
+  .bottomPage input {
+    width: 75%;
     height: 25px;
-    font-size:15px;
+    font-size: 15px;
     color: #919090;
     padding-left: 5px;
   }
-  .bottomPage input::-webkit-input-placeholder{
+  .bottomPage input::-webkit-input-placeholder {
     color: #919090;
     font-size: 12px;
     letter-spacing: 1px;
   }
-  .bottomPage button{
-    font-size: 16.18px;
-    top:50%;
-    transform: translateY(1.5%);
+  .bottomPage button {
+    font-size: 16.5px;
     background: white;
     border: 1.5px solid white;
   }
 
+  /*back to top button */
 
-  /* input box when selected */
-
-  input:focus{
-    outline: 2px solid rgb(218, 87, 87);
-  }
-
-  /* Newsletter pop up */
-
-.swal-overlay {
-    background-color: rgba(0, 0, 0, 0.45);
-  }
-  
-  .swal-title {
-    color: var(--background);
-  }
-  
-  .swal-text {
-    padding: 17px;
-    margin: 22px;
-    text-align: center;
-    color: #919090
-  }
-  
-  .swal-footer {
+  .top-bttn {
+    height: 40px;
+    width: 40px;
     background-color: var(--background);
-    margin-top: 32px;
-    overflow: hidden;
-  }
-  .swal-button {
-    left: 50%;
-    padding: 15px 40px;
-    border-radius: 60px;
-    background-color: white;
+    border: none;
+    color: white;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    display: none;
     font-size: 20px;
-    font-weight: 800;
-    color:var(--background);
-    transition-duration: 200ms;
   }
-  .swal-button:hover {
-    all: none;
-    left: 50%;
-    padding: 15px 40px;
-    border-radius: 60px;
-    background-color:var(--background);
-    font-size: 20px;
-    font-weight: 800;
-    color:white;
-    transition-duration: 200ms;
-  }
-  
-  @media screen and (max-width: 500px){
-    .bottomPage{
-      position: relative;
-      bottom: 00px;
-      padding-top: 20px;
-      padding-bottom: 50px;
-      padding-left: 5%;
-      padding-right: 5%;
-      width:100%;
-      color:white;
-      background-color: #919090;
-      z-index: -1;
-    }
-    
-    .bottomPage h1{
-      color: var(--background);
-    }
-    .bottomPage h2{
-      font-size: 18px;
-    }
-    .bottomPage .fas{
-      color: rgb(218, 87, 87);
-    }
-    
-    .bottomPage input{
-      width:75%;
-      height: 25px;
-      font-size:15px;
-      color: #919090;
-      padding-left: 5px;
-    }
-    .bottomPage input::-webkit-input-placeholder{
-      color: #919090;
-      font-size: 12px;
-      letter-spacing: 1px;
-    }
-    .bottomPage button{
-      font-size: 16.5px;
-      background: white;
-      border: 1.5px solid white;
-    }
-
-    /*back to top button */
-    
-    .top-bttn{
-      height: 40px;
-      width: 40px;
-      background-color: var(--background);
-      border: none;
-      color: white;
-      position: fixed;
-      bottom: 5px;
-      right: 5px;
-      border-radius: 5px;
-      cursor: pointer;
-      outline: none;
-      display: none;
-      font-size: 20px;
-    }
-  }
+}
