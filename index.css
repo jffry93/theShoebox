@@ -13,12 +13,12 @@
 
 /* navigation bar for slideshow images */
 
-.navigation{
+.navigation {
   position: absolute;
   bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
-  display:flex;
+  display: flex;
   z-index: 3;
 }
 .bar {
@@ -40,73 +40,72 @@
   background: var(--background);
 }
 
-input[name="r"]{
+input[name='r'] {
   position: absolute;
   visibility: hidden;
 }
 /*images*/
-.slides{
+.slides {
   width: 500%;
   height: 100%;
   display: flex;
   position: relative;
-  top:0;
-  bottom:0;
-  z-index:-10;
+  top: 0;
+  bottom: 0;
+  z-index: -10;
 }
 
-.slides-opacity{
+.slides-opacity {
   width: 500%;
   height: 100%;
   display: flex;
   position: absolute;
-  top:0;
-  bottom:0;
+  top: 0;
+  bottom: 0;
   background-color: rgba(0, 0, 0, 0.45);
-  z-index:1;
+  z-index: 1;
 }
 
-.slides-overlay{
+.slides-overlay {
   position: absolute;
-  top:0;
-  bottom:0;
-  height:100%;
-  width:500%;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 500%;
   z-index: 5;
   background-color: var(--overlay);
-  visibility:hidden;
+  visibility: hidden;
 }
 
-
-.slide{
+.slide {
   position: relative;
   width: 20%;
   transition: 0.6s;
 }
-.slide img{
+.slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-#r1:checked ~ .s1{
+#r1:checked ~ .s1 {
   margin-left: 0;
 }
-#r2:checked ~ .s1{
+#r2:checked ~ .s1 {
   margin-left: -20%;
 }
-#r3:checked ~ .s1{
+#r3:checked ~ .s1 {
   margin-left: -40%;
 }
-#r4:checked ~ .s1{
+#r4:checked ~ .s1 {
   margin-left: -60%;
 }
-#r5:checked ~ .s1{
+#r5:checked ~ .s1 {
   margin-left: -80%;
 }
 
 /* text for slidshow */
 
-.slide h1{
+.slide h1 {
   position: absolute;
   text-align: center;
   top: 40%;
@@ -118,9 +117,10 @@ input[name="r"]{
   z-index: 100;
   padding-left: 5%;
   padding-right: 5%;
-  z-index: 2;  animation: fade-in 3s ease-in;
+  z-index: 2;
+  animation: fade-in 3s ease-in;
 }
-@keyframes fade-in{
+@keyframes fade-in {
   0% {
     opacity: 0%;
   }
@@ -132,15 +132,12 @@ input[name="r"]{
   }
 }
 
-
 /* STEP 1!! content above slideshow */
 
-
-
 /* vvvvvvv content containers vvvvvv*/
-.shoeType{
+.shoeType {
   position: relative;
-  top:0px;
+  top: 0px;
   width: 100%;
   padding-top: 50px;
   padding-bottom: 40px;
@@ -148,15 +145,15 @@ input[name="r"]{
   justify-content: center;
   text-align: center;
   position: relative;
-  color:#919090;
+  color: #919090;
 }
 .typeContainer {
-  display:flex;
+  display: flex;
   flex-direction: rows;
   align-items: center;
   justify-content: center;
   text-align: center;
-  position:relative;
+  position: relative;
   top: 0px;
   width: 100%;
   height: 700px;
@@ -167,14 +164,14 @@ input[name="r"]{
   background: white;
   object-fit: contain;
 }
-.measureContainer{
+.measureContainer {
   position: relative;
-  top:50px;
+  top: 50px;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
-.shoeMeasurement{
+.shoeMeasurement {
   text-align: center;
   padding-bottom: 0px;
   padding: 20px;
@@ -187,23 +184,23 @@ input[name="r"]{
   padding-bottom: 40px;
   padding-left: 10px;
   padding-right: 10px;
-  color:#919090;
+  color: #919090;
 }
 
 #styleContainer {
   position: relative;
-  top:50px;
+  top: 50px;
 }
-.profInfo{
+.profInfo {
   position: relative;
   top: 50px;
   text-align: center;
   font-weight: 800;
   padding-top: 50px;
   padding-bottom: 80px;
-  color:#919090;
+  color: #919090;
 }
-.final{
+.final {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -213,15 +210,14 @@ input[name="r"]{
   background-color: var(--background);
 }
 
-
 /*^^^^^^ content containers ^^^^^^*/
 
-.box-Overlay{
+.box-Overlay {
   position: absolute;
-  top:0;
-  bottom:0;
-  width:370px;
-  height:700px;
+  top: 0;
+  bottom: 0;
+  width: 370px;
+  height: 700px;
   z-index: 1;
   background-color: var(--overlay);
 }
@@ -235,8 +231,8 @@ input[name="r"]{
   margin: 15px;
   box-sizing: border-box;
   overflow: hidden;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
 }
 .box::before {
   content: '';
@@ -251,7 +247,7 @@ input[name="r"]{
   transition: 0.5s;
   transform: scaleX(0);
   opacity: 0;
-  z-index: 1;
+  z-index: 5;
 }
 
 .box:hover::before {
@@ -280,60 +276,60 @@ input[name="r"]{
   opacity: 1;
 }
 /*type image position*/
-.casualwear{
+.casualwear {
   position: relative;
-  right:100px;
+  right: 100px;
   bottom: 100px;
 }
-.officewear{
+.officewear {
   position: relative;
   bottom: 80px;
 }
-.activewear{
+.activewear {
   position: relative;
   bottom: 80px;
-  right:50px;
+  right: 50px;
 }
 
 /*style image position*/
-.clean{
-  position: relative;
-  right:50px;
-}
-.subtle{
+.clean {
   position: relative;
   right: 50px;
 }
-.loud{
+.subtle {
+  position: relative;
+  right: 50px;
+}
+.loud {
   position: relative;
   bottom: 50px;
 }
 
 /* type containter */
-.typeImgBox{
+.typeImgBox {
   position: absolute;
   object-fit: cover;
 }
-.typeImgBox img{
+.typeImgBox img {
   transition: 0.5s;
   object-fit: cover;
   position: relative;
-  height:800px;
-  width:500px;
-  margin-left:auto;
-  margin-right:auto;
+  height: 800px;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
   transform: translate(-50%);
-  transform: scale(1.0);
+  transform: scale(1);
 }
 .box:hover .typeImgBox img {
-  opacity: .5;
+  opacity: 0.5;
   transform: scale(1.2);
 }
-.box:hover .typeContent h1{
+.box:hover .typeContent h1 {
   visibility: hidden;
   transition: 0.1s;
 }
-.typeContent{
+.typeContent {
   position: absolute;
   width: 100%;
   top: 50%;
@@ -344,27 +340,27 @@ input[name="r"]{
   vertical-align: middle;
 }
 
-.typeContent h1{
+.typeContent h1 {
   font-size: 50px;
   position: absolute;
   width: 100%;
   vertical-align: middle;
   text-align: center;
-  top:35%;
-  color:white;
-  font-family: "roboto-bold";
+  top: 35%;
+  color: white;
+  font-family: 'roboto-bold';
   font-weight: 800;
   transition: 0.5s;
   transform: translateY(-50px);
 }
 
-.typeContent p{
+.typeContent p {
   text-align: center;
   position: relative;
   width: 90%;
   left: 20px;
-  padding:0;
-  color:white;
+  padding: 0;
+  color: white;
   font-size: 25px;
   font-weight: 800;
   transition: 0.5s;
@@ -376,7 +372,7 @@ input[name="r"]{
 
 /*style container */
 
-.styleContent{
+.styleContent {
   position: relative;
   width: 100%;
   top: 50%;
@@ -388,47 +384,45 @@ input[name="r"]{
   text-align: center;
 }
 
-.styleContent h1{
+.styleContent h1 {
   font-size: 5vh;
   position: absolute;
   width: 100%;
   text-align: center;
   justify-content: center;
   padding-top: 60px;
-  color:white;
+  color: white;
   font-weight: 800px;
   transition: 0.5s;
   transform: translateY(-50px);
 }
 
-.styleContent p{
-  margin-bottom:5vh;
-  padding:0;
-  color:white;
+.styleContent p {
+  margin-bottom: 5vh;
+  padding: 0;
+  color: white;
   font-weight: 800;
   transition: 0.5s;
   transform: translateY(-50px);
   opacity: 0;
   visibility: hidden;
 }
-.box:hover .styleContent h1{
+.box:hover .styleContent h1 {
   opacity: 0;
   visibility: hidden;
   transform: translateY(0px);
 }
-.box:hover .styleContent p{
+.box:hover .styleContent p {
   opacity: 1;
   visibility: visible;
   transform: translateY(0px);
 }
 
-.box:hover .typeContent p{
+.box:hover .typeContent p {
   opacity: 1;
   visibility: visible;
   transform: translateY(0px);
 }
-
-
 
 /* measurement image container*/
 
@@ -439,7 +433,7 @@ input[name="r"]{
   min-height: 500px;
   background: #000;
   box-sizing: border-box;
-  overflow:hidden;
+  overflow: hidden;
   object-fit: cover;
 }
 .measure::before {
@@ -483,27 +477,27 @@ input[name="r"]{
   transform: scaleY(1);
   opacity: 1;
 }
-.footImg{
+.footImg {
   position: absolute;
   object-fit: cover;
   width: 100%;
 }
-.measure-overlay{
+.measure-overlay {
   position: absolute;
-  top:0;
-  bottom:0;
+  top: 0;
+  bottom: 0;
   height: 80vh;
-  width:100%;
-  min-height:500px;
+  width: 100%;
+  min-height: 500px;
   z-index: 1;
   background-color: var(--overlay);
 }
-.footImg img{
+.footImg img {
   position: relative;
-  top:0;
-  left:0;
-  width:100%;
-  height:80vh;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80vh;
   min-height: 500px;
   transition: 0.5s;
   transform: scale(1.6);
@@ -511,11 +505,11 @@ input[name="r"]{
   z-index: 0;
 }
 .measure:hover .footImg img {
-  opacity: .5;
+  opacity: 0.5;
   transform: scale(1.8);
   object-fit: cover;
 }
-.measureContent{
+.measureContent {
   position: absolute;
   width: 100%;
   top: 50%;
@@ -526,36 +520,36 @@ input[name="r"]{
   text-align: center;
 }
 
-.measureContent h1{
+.measureContent h1 {
   font-size: 50px;
   position: absolute;
   right: 5px;
   width: 100%;
   vertical-align: middle;
   text-align: center;
-  top:50%;
+  top: 50%;
   transform: translateY(-50px);
-  color:white;
-  font-family: "roboto-bold";
+  color: white;
+  font-family: 'roboto-bold';
   font-weight: 800;
   transition: 0.5s;
 }
-.measure:hover .measureContent h1{
-  margin:0 0 10px;
-  padding-top:50px;
-  color:white;
+.measure:hover .measureContent h1 {
+  margin: 0 0 10px;
+  padding-top: 50px;
+  color: white;
   font-weight: 800px;
   transition: 0.2s;
   transform: translateY(-50px);
   opacity: 0;
 }
-.measureContent p{
+.measureContent p {
   text-align: center;
   position: relative;
   width: 90%;
   left: 20px;
-  padding:0;
-  color:white;
+  padding: 0;
+  color: white;
   font-size: 25px;
   font-weight: 800;
   transition: 0.5s;
@@ -565,19 +559,19 @@ input[name="r"]{
   visibility: hidden;
 }
 
-.measure:hover .measureContent p{
+.measure:hover .measureContent p {
   opacity: 1;
   visibility: visible;
   transform: translateY(0px);
 }
-.measureContent ul{
+.measureContent ul {
   list-style: none;
   text-align: center;
   position: relative;
   width: 90%;
   left: 20px;
-  padding:0;
-  color:white;
+  padding: 0;
+  color: white;
   font-size: 25px;
   font-weight: 800;
   transition: 0.5s;
@@ -587,14 +581,14 @@ input[name="r"]{
   visibility: hidden;
 }
 
-.measure:hover .measureContent ul{
+.measure:hover .measureContent ul {
   opacity: 1;
   visibility: visible;
   transform: translateY(0px);
 }
 
 /* slideshow at the bottom of the page */
-.finalText{
+.finalText {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -605,19 +599,19 @@ input[name="r"]{
   font-weight: 800;
   width: 100%;
   color: white;
-  z-index: 1; 
+  z-index: 1;
 }
 /* sign up button */
-a{
+a {
   text-decoration: inherit;
   text-align: center;
-  color:var(--background)
+  color: var(--background);
 }
-.signup-box{
+.signup-box {
   position: relative;
   text-align: center;
   width: 100%;
-  bottom:-50%;
+  bottom: -50%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -628,7 +622,7 @@ a{
   transform: translateX(-50%);
   font-weight: 800;
   font-size: 50px;
-  color:var(--background);
+  color: var(--background);
   background-color: white;
   border-radius: 60px;
   padding: 25px 60px;
@@ -637,18 +631,18 @@ a{
   transition-duration: 200ms;
 }
 
-.signup-bttn:hover{
-  background-color:var(--background);
+.signup-bttn:hover {
+  background-color: var(--background);
   color: white;
   border: 2px solid white;
 }
 
-.finalContainer{
+.finalContainer {
   position: relative;
   top: 0px;
   text-align: center;
-  width:100%;
-  height:87.5vh;
+  width: 100%;
+  height: 87.5vh;
   min-height: 500px;
   background: url(images/final1.jpeg);
   background-size: cover;
@@ -656,55 +650,53 @@ a{
   animation: slide 20s infinite;
   z-index: 1;
 }
-@keyframes slide{
-  15%{
+@keyframes slide {
+  15% {
     background: url(images/final1.jpeg);
     background-size: cover;
     background-position: center center;
   }
-  20%{
-    background:url(images/final2.jpeg);
+  20% {
+    background: url(images/final2.jpeg);
     background-size: cover;
     background-position: center center;
   }
-  35%{
-    background:url(images/final2.jpeg);
+  35% {
+    background: url(images/final2.jpeg);
     background-size: cover;
     background-position: center center;
   }
-  40%{
-    background:url(images/final3.jpeg);
+  40% {
+    background: url(images/final3.jpeg);
     background-size: cover;
     background-position: center center;
   }
-  55%{
-    background:url(images/final3.jpeg);
+  55% {
+    background: url(images/final3.jpeg);
     background-size: cover;
     background-position: center center;
   }
-  60%{
-    background:url(images/casualwar.jpeg);
+  60% {
+    background: url(images/casualwar.jpeg);
     background-size: cover;
     background-position: center center;
   }
-  75%{
-    background:url(images/casualwar.jpeg);
+  75% {
+    background: url(images/casualwar.jpeg);
     background-size: cover;
     background-position: center center;
   }
-  80%{
-    background:url(images/final5.jpeg);
+  80% {
+    background: url(images/final5.jpeg);
     background-size: cover;
     background-position: center center;
   }
-  95%{
-    background:url(images/final5.jpeg);
+  95% {
+    background: url(images/final5.jpeg);
     background-size: cover;
     background-position: center center;
   }
-
 }
-
 
 /* Newsletter notification */
 
@@ -720,7 +712,7 @@ a{
   padding: 17px;
   margin: 22px;
   text-align: center;
-  color: #919090
+  color: #919090;
 }
 
 .swal-footer {
@@ -735,13 +727,13 @@ a{
   background-color: white;
   font-size: 20px;
   font-weight: 800;
-  color:var(--background);
+  color: var(--background);
   transition-duration: 200ms;
 }
 
 /* change direction of type and style container */
-@media screen and (max-width: 1000px){
-  .slide h1{
+@media screen and (max-width: 1000px) {
+  .slide h1 {
     position: absolute;
     text-align: center;
     top: 45%;
@@ -752,15 +744,16 @@ a{
     z-index: 100;
     padding-left: 5%;
     padding-right: 5%;
-    z-index: 2;  animation: fade-in 3s ease-in;
+    z-index: 2;
+    animation: fade-in 3s ease-in;
   }
   .typeContainer {
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    position:relative;
+    position: relative;
     width: 100%;
     min-height: 600px;
     padding-left: 10px;
@@ -779,73 +772,72 @@ a{
     box-sizing: border-box;
     overflow: hidden;
   }
-  .box-Overlay{
+  .box-Overlay {
     position: absolute;
-    top:0;
-    bottom:0;
-    width:100%;
-    min-height:70px;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 70px;
     z-index: 1;
     background-color: var(--overlay);
   }
-  .typeImgBox img{
+  .typeImgBox img {
     transition: 0.5s;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    height:600px;
-    width:100%;
+    height: 600px;
+    width: 100%;
     transform: translate(-50%);
-    transform: scale(1.0);
+    transform: scale(1);
   }
-  .casualwear{
+  .casualwear {
     position: relative;
-    right:0px;
+    right: 0px;
     bottom: 250px;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
   }
-  .officewear{
+  .officewear {
     position: relative;
     bottom: 200px;
-    right:0px;
+    right: 0px;
   }
-  .activewear{
+  .activewear {
     position: relative;
     bottom: 250px;
-    right:0px;
+    right: 0px;
   }
-  .clean{
+  .clean {
     position: relative;
     bottom: 150px;
-    right:0px;
+    right: 0px;
   }
-  .subtle{
+  .subtle {
     position: relative;
     right: 0px;
     bottom: 200px;
   }
-  .loud{
+  .loud {
     position: relative;
     bottom: 120px;
-    right:0px;
+    right: 0px;
   }
   .box:hover .typeImgBox img {
-    opacity: .5;
+    opacity: 0.5;
     transform: scale(1.2);
   }
-  .measureContent p{
+  .measureContent p {
     font-size: 19px;
   }
-  .measureContent ul{
+  .measureContent ul {
     font-size: 19px;
   }
 }
 
-
 /* 
 /* change direction of type and style container */
-@media screen and (max-width: 910px){
-  .finalText{
+@media screen and (max-width: 910px) {
+  .finalText {
     position: relative;
     top: 40%;
     transform: translateY(-50%);
@@ -856,25 +848,23 @@ a{
     font-weight: 800;
     width: 100%;
     color: white;
-    z-index: 1; 
+    z-index: 1;
   }
-  .signup-box{
+  .signup-box {
     position: relative;
     text-align: center;
     width: 100%;
-    bottom:-10%;
+    bottom: -10%;
     left: 50%;
     transform: translateX(-50%);
   }
-
 }
 
 /*For smartphone sized devices
 
 Changed font sizes and minor adjustments to accomodate the smaller size screen*/
 
-
-@media screen and (max-width: 530px){
+@media screen and (max-width: 530px) {
   .slidershow {
     width: 100%;
     height: 90vh;
@@ -885,21 +875,21 @@ Changed font sizes and minor adjustments to accomodate the smaller size screen*/
     z-index: 2;
     min-height: 500px;
   }
-  .slide h1{
+  .slide h1 {
     top: 50%;
     transform: translateY(-50%);
     font-size: 50px;
   }
-  .shoeType{
+  .shoeType {
     font-size: 18px;
   }
-  .shoeStyle{
+  .shoeStyle {
     font-size: 18px;
   }
-  .profInfo{
-    font-size:18px;
+  .profInfo {
+    font-size: 18px;
   }
-  .finalText{
+  .finalText {
     position: relative;
     top: 40%;
     transform: translateY(-50%);
@@ -910,13 +900,13 @@ Changed font sizes and minor adjustments to accomodate the smaller size screen*/
     font-weight: 800;
     width: 100%;
     color: white;
-    z-index: 1; 
+    z-index: 1;
   }
-  .signup-box{
+  .signup-box {
     position: relative;
     text-align: center;
     width: 100%;
-    bottom:-30%;
+    bottom: -30%;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -926,62 +916,62 @@ Changed font sizes and minor adjustments to accomodate the smaller size screen*/
     transform: translateY(-50%);
     font-weight: 800;
     font-size: 25px;
-    color:var(--background);
+    color: var(--background);
     background-color: white;
     border-radius: 60px;
     padding: 25px 60px;
     z-index: 2;
-  
+
     transition-duration: 200ms;
   }
-  .final{
+  .final {
     position: relative;
     top: 20px;
     text-align: center;
     height: 300px;
     background-color: var(--background);
   }
-  .shoeMeasurement{
+  .shoeMeasurement {
     text-align: center;
     padding-bottom: 15px;
     padding: 20px;
   }
-  .measureContent h1{
+  .measureContent h1 {
     font-size: 35px;
     position: absolute;
     right: 5px;
     width: 100%;
     vertical-align: middle;
     text-align: center;
-    top:40%;
+    top: 40%;
     transform: translateY(-50px);
-    color:white;
-    font-family: "roboto-bold";
+    color: white;
+    font-family: 'roboto-bold';
     font-weight: 800;
     transition: 0.5s;
   }
-  .typeContent h1{
+  .typeContent h1 {
     font-size: 30px;
     position: absolute;
     right: 2%;
     width: 100%;
     vertical-align: middle;
     text-align: center;
-    top:50%;
-    color:white;
-    font-family: "roboto-bold";
+    top: 50%;
+    color: white;
+    font-family: 'roboto-bold';
     font-weight: 800;
     transition: 0.5s;
     transform: translateY(-50px);
   }
-  
-  .typeContent p{
+
+  .typeContent p {
     text-align: center;
     position: relative;
     width: 90%;
     left: 20px;
-    padding:0;
-    color:white;
+    padding: 0;
+    color: white;
     font-size: 15px;
     font-weight: 800;
     transition: 0.5s;
@@ -990,13 +980,13 @@ Changed font sizes and minor adjustments to accomodate the smaller size screen*/
     opacity: 0;
     visibility: hidden;
   }
-  .measureContent p{
+  .measureContent p {
     text-align: center;
     position: relative;
     width: 90%;
     left: 20px;
-    padding:0;
-    color:white;
+    padding: 0;
+    color: white;
     font-size: 15px;
     font-weight: 800;
     transition: 0.5s;
@@ -1005,14 +995,14 @@ Changed font sizes and minor adjustments to accomodate the smaller size screen*/
     opacity: 0;
     visibility: hidden;
   }
-  .measureContent ul{
+  .measureContent ul {
     list-style: none;
     text-align: center;
     position: relative;
     width: 90%;
     left: 20px;
-    padding:0;
-    color:white;
+    padding: 0;
+    color: white;
     font-size: 15px;
     font-weight: 800;
     transition: 0.5s;
