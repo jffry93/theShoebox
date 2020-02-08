@@ -449,7 +449,7 @@ input[name='r'] {
   transition: 0.5s;
   transform: scaleX(0);
   opacity: 0;
-  z-index: 1;
+  z-index: 3;
 }
 
 .measure:hover::before {
