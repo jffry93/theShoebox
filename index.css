@@ -890,7 +890,7 @@ Changed font sizes and minor adjustments to accomodate the smaller size screen*/
     font-size: 18px;
   }
   .finalText {
-    position: relative;
+    position: absolute;
     top: 40%;
     transform: translateY(-50%);
     padding: 30px 15px 0px 15px;
