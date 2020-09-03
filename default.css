@@ -19,9 +19,7 @@
   bottom: 41px;
   right: 30px;
   border-radius: 5px;
-  cursor: pointer;
-  outline: none;
-  text-align: center;
+  transform: translateY(1.5%);
   font-size: 20px;
   z-index: 1000;
 }
@@ -33,6 +31,7 @@
 }
 .top-bttn i {
   position: relative;
+  align-self: center;
 }
 body {
   margin: 0;
@@ -359,16 +358,11 @@ input:focus {
     height: 40px;
     width: 40px;
     background-color: var(--background);
-    border: none;
     color: white;
     position: relative;
     bottom: 41px;
     right: 5px;
     border-radius: 5px;
-    cursor: pointer;
-    outline: none;
-    display: none;
-    transform: translateY(1.5%);
     font-size: 20px;
   }
 }
