@@ -19,7 +19,7 @@
   bottom: 41px;
   right: 30px;
   border-radius: 5px;
-  align-items: center;
+  text-align: center;
   font-size: 20px;
   z-index: 1000;
 }
@@ -30,7 +30,7 @@
   background: inherit;
 }
 .top-bttn i {
-  align-self: auto;
+  text-align: center;
 }
 body {
   margin: 0;
