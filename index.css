@@ -925,6 +925,7 @@ Changed font sizes and minor adjustments to accomodate the smaller size screen*/
   }
   .final {
     position: relative;
+    top: -100px;
     text-align: center;
     height: 300px;
     background-color: var(--background);
