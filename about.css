@@ -1,11 +1,11 @@
 /* About Us Content*/
 /* top of the page */
-#topImg{
+#topImg {
   background-image: url(images/casualshoes.jpeg);
   background-size: cover;
   background-position: center center;
   position: relative;
-  top:0;
+  top: 0;
   bottom: 0;
   height: 90vh;
   min-height: 500px;
@@ -13,27 +13,27 @@
   z-index: -10;
 }
 
-#topImg-overlay{
+#topImg-overlay {
   position: absolute;
-  background-color: rgba(0,0,0,0.5);
-  top:0;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
   bottom: 0;
   height: 100%;
   width: 100%;
   z-index: -5;
 }
-#topImg h1{
+#topImg h1 {
   color: white;
   position: absolute;
-  top:40%;
+  top: 40%;
   transform: translateY(-50%);
   font-size: 100px;
   font-weight: 800;
-  width:100%;
+  width: 100%;
   text-align: center;
   animation: fade-in 3s ease-in;
 }
-@keyframes fade-in{
+@keyframes fade-in {
   0% {
     opacity: 0%;
   }
@@ -45,7 +45,7 @@
   }
 }
 /* Origin story */
-.origin{
+.origin {
   width: 100%;
   text-align: center;
   padding: 80px;
@@ -54,90 +54,88 @@
   font-size: 15px;
 }
 
-.origin h1{
+.origin h1 {
   padding: 20px;
 }
-.originlogo{
+.originlogo {
   color: var(--background);
   text-decoration: inherit;
   font-size: 40px;
   font-weight: 800;
-  font-family:"roboto-BlackItalic";
+  font-family: 'roboto-BlackItalic';
 }
 /* about us */
-#aboutUs{
+#aboutUs {
   width: 100%;
   text-align: center;
   padding-top: 60px;
 }
 
-#aboutUs h1{
+#aboutUs h1 {
   color: var(--background);
   font-size: 50px;
   font-weight: 800;
 }
-#aboutUsImgBox{
+#aboutUsImgBox {
   overflow: hidden;
   background: white;
   position: relative;
   z-index: -1;
-  opacity: .5;
-  top:0;
+  opacity: 0.5;
+  top: 0;
   bottom: 0;
   height: 50vh;
   width: 100%;
   min-height: 500px;
 }
-.aboutUsImg{
+.aboutUsImg {
   background-image: url(images/aboutusimg.jpeg);
-  background-size: cover ;
+  background-size: cover;
   background-position: center center;
   position: relative;
   z-index: 2;
-  top:0;
+  top: 0;
   bottom: 0;
   height: 100%;
   width: 100%;
   animation: slide1 10s infinite;
   z-index: 1;
 }
-@keyframes slide1{
-  27%{
-    background:url(images/aboutusimg.jpeg);
+@keyframes slide1 {
+  27% {
+    background: url(images/aboutusimg.jpeg);
     background-size: cover;
     background-position: center center;
   }
-  33%{
-    background:url(images/aboutusimg3.jpeg);
+  33% {
+    background: url(images/aboutusimg3.jpeg);
     background-size: cover;
     background-position: center center;
   }
-  61%{
-    background:url(images/aboutusimg3.jpeg);
+  61% {
+    background: url(images/aboutusimg3.jpeg);
     background-size: cover;
     background-position: center center;
   }
-  66%{
-    background:url(images/aboutusimg2.jpeg);
+  66% {
+    background: url(images/aboutusimg2.jpeg);
     background-size: cover;
     background-position: center center;
   }
-  95%{
-    background:url(images/aboutusimg2.jpeg);
+  95% {
+    background: url(images/aboutusimg2.jpeg);
     background-size: cover;
     background-position: center center;
   }
-
 }
 
-
-#aboutUs p{
+#aboutUs p {
   font-size: 25px;
   font-weight: 800;
   margin: 10px;
 }
 /* our mission */
-#ourMission{
+#ourMission {
   display: grid;
   grid-template-columns: 40% 50%;
   grid-gap: 40px;
@@ -147,22 +145,22 @@
   text-align: center;
   font-size: 25px;
 }
-#ourMission h1{
-  color:var(--background);
+#ourMission h1 {
+  color: var(--background);
   padding: 20px;
   font-weight: 800;
 }
-#ourMission p{
+#ourMission p {
   padding: 10px;
   font-size: 20px;
 }
 
-#missionContent{
+#missionContent {
   margin: 20px;
 }
 
-#missionImg{
-  width:100%;
+#missionImg {
+  width: 100%;
   height: 50vh;
   min-height: 450px;
   position: relative;
@@ -172,65 +170,64 @@
   animation: slide 16s infinite;
   z-index: -1;
 }
-@keyframes slide{
-  15%{
-    background:url(images/poverty1.jpeg);
+@keyframes slide {
+  15% {
+    background: url(images/poverty1.jpeg);
     background-size: cover;
     background-position: center center;
   }
-  20%{
-    background:url(images/poverty2.jpeg);
+  20% {
+    background: url(images/poverty2.jpeg);
     background-size: cover;
     background-position: center center;
   }
-  35%{
-    background:url(images/poverty2.jpeg);
+  35% {
+    background: url(images/poverty2.jpeg);
     background-size: cover;
     background-position: center center;
   }
-  40%{
-    background:url(images/poverty3.jpeg);
+  40% {
+    background: url(images/poverty3.jpeg);
     background-size: cover;
     background-position: center center;
   }
-  55%{
-    background:url(images/poverty3.jpeg);
+  55% {
+    background: url(images/poverty3.jpeg);
     background-size: cover;
     background-position: center center;
   }
-  60%{
-    background:url(images/poverty4.jpeg);
+  60% {
+    background: url(images/poverty4.jpeg);
     background-size: cover;
     background-position: center center;
   }
-  75%{
-    background:url(images/poverty4.jpeg);
+  75% {
+    background: url(images/poverty4.jpeg);
     background-size: cover;
     background-position: center center;
   }
-  80%{
-    background:url(images/poverty5.jpeg);
+  80% {
+    background: url(images/poverty5.jpeg);
     background-size: cover;
     background-position: center center;
   }
-  95%{
-    background:url(images/poverty5.jpeg);
+  95% {
+    background: url(images/poverty5.jpeg);
     background-size: cover;
     background-position: center center;
   }
-
 }
 
 /* reviews */
 
-#reviews{
+#reviews {
   align-items: center;
   justify-content: center;
   text-align: center;
   padding-left: 10px;
   padding-right: 10px;
 }
-#reviews h1{
+#reviews h1 {
   color: var(--background);
   font-size: 50px;
   font-weight: 800;
@@ -239,29 +236,29 @@
   margin: 0;
 }
 
-#reviews a{
+#reviews a {
   font-size: 50px;
   font-weight: 800;
   color: var(--background);
 }
 
-#reviews .star-outline{
-  color:#919090;
+#reviews .star-outline {
+  color: #919090;
 }
 
-#reviews #justin{
+#reviews #justin {
   color: var(--background);
   text-decoration: inherit;
   font-size: 30px;
   font-weight: 800;
 }
-#reviews #nike{
+#reviews #nike {
   color: var(--background);
   text-decoration: inherit;
   font-size: 30px;
   font-weight: 800;
 }
-#reviews #nyt{
+#reviews #nyt {
   color: var(--background);
   text-decoration: inherit;
   font-size: 30px;
@@ -270,18 +267,18 @@
 
 /* sponsors */
 
-#sponsors{
+#sponsors {
   align-items: center;
   justify-content: center;
   text-align: center;
 }
 
-#sponsors h1{
+#sponsors h1 {
   color: var(--background);
   font-size: 50px;
-  padding:80px;
+  padding: 80px;
 }
-#sponsors h2{
+#sponsors h2 {
   font-size: 30px;
   font-weight: 800;
   padding-top: 50px;
@@ -289,7 +286,7 @@
   padding-left: 5%;
   padding-right: 5%;
 }
-#productslide{
+#productslide {
   text-align: center;
   padding-top: 60px;
   color: black;
@@ -298,55 +295,55 @@
 }
 
 #slider {
-  height:300px;
-  width:90%;
-  margin:auto;
-  overflow:hidden;
-  background:#CCC;
+  height: 300px;
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+  background: #ccc;
 }
 
 .slide {
-  height:300px;
-  float:left;
-  text-align:center;
-  border:1PX SOLID white;
-  line-height:8em;
-  font-size:40px;
+  height: 300px;
+  float: left;
+  text-align: center;
+  border: 1px SOLID white;
+  line-height: 8em;
+  font-size: 40px;
 }
-#one{
+#one {
   position: relative;
-background-image:url(images/brand11.jpg);
-background-size: cover;
-background-position: center;
-}
-#two{
-background-image:url(images/brand22.jpeg);
-background-size: cover;
-background-position: center;
-}
-#three{
-  background-image:url(images/brand4.jpg);
+  background-image: url(images/brandtoms.png);
   background-size: cover;
   background-position: center;
-  }
-#four{
-    background-image:url(images/brand3.jpg);
-    background-size: cover;
-    background-position: center;
-    }
-#five{
-      background-image:url(images/branddc.jpg);
-      background-size: cover;
-      background-position: center;
-      }
-#six{
-        background-image:url(images/brandtoms.png);
-        background-size: cover;
-        background-position: center;
-        }
+}
+#two {
+  background-image: url(images/brand22.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+#three {
+  background-image: url(images/brand4.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#four {
+  background-image: url(images/brand3.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#five {
+  background-image: url(images/branddc.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#six {
+  background-image: url(images/brand11.jpg);
+  background-size: cover;
+  background-position: center;
+}
 
-@media screen and (max-width: 1250px){
-  #ourMission{
+@media screen and (max-width: 1250px) {
+  #ourMission {
     display: flex;
     flex-direction: column;
     row-gap: 100px;
@@ -356,171 +353,163 @@ background-position: center;
     justify-content: center;
     text-align: center;
   }
-  .origin{
+  .origin {
     width: 100%;
     text-align: center;
     padding: 80px;
     font-size: 15px;
   }
   #slider {
-    height:200px;
-    width:100%;
-    margin:auto;
-    overflow:hidden;
-    background:#CCC;
+    height: 200px;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    background: #ccc;
   }
   .slide {
-    height:200px;
-    float:left;
-    border:1PX SOLID white;
-    line-height:8em;
-    font-size:40px;
+    height: 200px;
+    float: left;
+    border: 1px SOLID white;
+    line-height: 8em;
+    font-size: 40px;
   }
-
 }
-@media screen and (max-width: 1000px){
-  #topImg h1{
+@media screen and (max-width: 1000px) {
+  #topImg h1 {
     font-size: 70px;
   }
-  .origin{
+  .origin {
     font-size: 10px;
   }
-  .originlogo{
+  .originlogo {
     font-size: 30px;
   }
-  #aboutUs h1{
+  #aboutUs h1 {
     font-size: 40px;
     margin: 10px;
     padding-bottom: 40px;
   }
-  #aboutUs p{
+  #aboutUs p {
     font-size: 20px;
     margin: 10px;
   }
-  #ourMission h1{
+  #ourMission h1 {
     font-size: 40px;
   }
-  #ourMission p{
+  #ourMission p {
     font-size: 20px;
   }
-  #reviews h1{
+  #reviews h1 {
     font-size: 40px;
   }
-  
-  #reviews a{
+
+  #reviews a {
     font-size: 40px;
   }
-  #reviews h2{
+  #reviews h2 {
     font-size: 20px;
   }
-  #reviews #justin{
+  #reviews #justin {
     color: var(--background);
     text-decoration: inherit;
     font-size: 20px;
   }
-  #reviews #nike{
+  #reviews #nike {
     color: var(--background);
     text-decoration: inherit;
     font-size: 20px;
   }
-  #reviews #nyt{
+  #reviews #nyt {
     color: var(--background);
     text-decoration: inherit;
     font-size: 20px;
   }
-  #sponsors h1{
+  #sponsors h1 {
     font-size: 40px;
   }
-  #sponsors h2{
+  #sponsors h2 {
     font-size: 25px;
   }
 }
 
-@media screen and (max-width: 500px){
-  .origin{
+@media screen and (max-width: 500px) {
+  .origin {
     padding-top: 40px;
     padding-bottom: 40px;
     padding-left: 5px;
     padding-right: 5px;
   }
-  #topImg h1{
+  #topImg h1 {
     color: white;
     position: absolute;
-    top:50%;
+    top: 50%;
     transform: translateY(-50%);
     font-size: 50px;
     font-weight: 800;
-    width:100%;
+    width: 100%;
     text-align: center;
     animation: fade-in 3s ease-in;
   }
-  .origin{
+  .origin {
     font-size: 10px;
   }
-  .originlogo{
+  .originlogo {
     font-size: 27px;
   }
-  #aboutUs h1{
+  #aboutUs h1 {
     font-size: 30px;
     margin: 10px;
     padding-bottom: 40px;
   }
-  #aboutUs p{
+  #aboutUs p {
     font-size: 20px;
     margin: 10px;
   }
-  #ourMission h1{
+  #ourMission h1 {
     font-size: 30px;
   }
-  #ourMission p{
+  #ourMission p {
     font-size: 17px;
   }
-  #reviews h1{
+  #reviews h1 {
     font-size: 30px;
   }
-  
-  #reviews a{
+
+  #reviews a {
     font-size: 30px;
   }
-  #reviews h2{
+  #reviews h2 {
     font-size: 17px;
   }
-  #reviews #justin{
+  #reviews #justin {
     font-size: 17px;
   }
-  #reviews #nike{
+  #reviews #nike {
     font-size: 17px;
   }
-  #reviews #nyt{
+  #reviews #nyt {
     font-size: 17px;
   }
-  #sponsors h1{
+  #sponsors h1 {
     font-size: 30px;
   }
-  #sponsors h2{
+  #sponsors h2 {
     font-size: 19px;
     padding-left: 5px;
     padding-right: 5px;
   }
   #slider {
-    height:100px;
-    width:100%;
-    margin:auto;
-    overflow:hidden;
-    background:#CCC;
+    height: 100px;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    background: #ccc;
   }
   .slide {
-    height:100px;
-    float:left;
-    border:1PX SOLID white;
-    line-height:8em;
-    font-size:40px;
+    height: 100px;
+    float: left;
+    border: 1px SOLID white;
+    line-height: 8em;
+    font-size: 40px;
   }
 }
-
-
-
-
-
-
-

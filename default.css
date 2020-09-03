@@ -368,6 +368,7 @@ input:focus {
     cursor: pointer;
     outline: none;
     display: none;
+    justify-items: center;
     font-size: 20px;
   }
 }
