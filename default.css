@@ -31,7 +31,8 @@
   background: inherit;
 }
 .top-bttn i {
-  margin: auto auto;
+  margin: 10px auto;
+  top: 50%;
 }
 body {
   margin: 0;
