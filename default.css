@@ -10,6 +10,7 @@
 }
 /* back to top button */
 .top-bttn {
+  position: fixed;
   height: 40px;
   width: 40px;
   background-color: var(--background);
