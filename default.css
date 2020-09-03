@@ -17,7 +17,7 @@
   border: none;
   color: white;
   bottom: 41px;
-  right: 50px;
+  right: 30px;
   border-radius: 5px;
   cursor: pointer;
   outline: none;
@@ -30,6 +30,9 @@
   border: 1px solid var(--background);
   color: var(--background);
   background: inherit;
+}
+.top-bttn i {
+  position: relative;
 }
 body {
   margin: 0;
@@ -239,8 +242,6 @@ nav a:hover {
   color: #919090;
   font-size: 12px;
   letter-spacing: 1px;
-  margin-top: auto;
-  margin-bottom: auto;
 }
 .bottomPage button {
   font-size: 16.18px;
