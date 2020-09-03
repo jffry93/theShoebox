@@ -368,7 +368,7 @@ input:focus {
     cursor: pointer;
     outline: none;
     display: none;
-    justify-items: center;
+    transform: translateY(1.5%);
     font-size: 20px;
   }
 }
