@@ -21,9 +21,9 @@
   border-radius: 5px;
   cursor: pointer;
   outline: none;
-  display: none;
-  font-size: 20px;
+  display: flex;
   justify-content: space-around;
+  font-size: 20px;
   z-index: 1000;
 }
 
@@ -245,6 +245,8 @@ nav a:hover {
 .bottomPage button {
   font-size: 16.18px;
   top: 50%;
+  padding-left: 3px;
+  padding-right: 3px;
   transform: translateY(1.5%);
   background: var(--background);
   border: 3px solid var(--background);
