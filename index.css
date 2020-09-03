@@ -203,14 +203,21 @@ input[name='r'] {
 .final {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   position: relative;
-  top: 30px;
-  height: 50vh;
-  max-height: 400px;
+  height: 35vh;
+  min-height: 400px;
+  max-height: 500px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   text-align: center;
   background-color: var(--background);
 }
-
+@media screen and (max-width: 875px) {
+  .final {
+    height: 50vh;
+  }
+}
 /*^^^^^^ content containers ^^^^^^*/
 
 .box-Overlay {
@@ -591,10 +598,6 @@ input[name='r'] {
 /* slideshow at the bottom of the page */
 .finalText {
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 30px 15px 0px 15px;
-  margin: 0;
   text-align: center;
   font-size: 50px;
   font-weight: 800;
@@ -610,23 +613,20 @@ a {
 }
 .signup-box {
   position: relative;
-  text-align: center;
-  width: 100%;
-  bottom: -50%;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .signup-bttn {
   position: relative;
-  top: 0%;
-  right: 0%;
-  transform: translateX(-50%);
+  transform: translateY(50%);
   font-weight: 800;
   font-size: 50px;
   color: var(--background);
   background-color: white;
   border-radius: 60px;
   padding: 25px 60px;
+  margin-top: 33.5px;
+  margin-bottom: 33.5px;
   z-index: 2;
 
   transition-duration: 200ms;
@@ -836,29 +836,6 @@ a {
 
 /* 
 /* change direction of type and style container */
-@media screen and (max-width: 910px) {
-  .finalText {
-    position: relative;
-    top: 40%;
-    transform: translateY(-50%);
-    padding: 30px 15px 0px 15px;
-    margin: 0;
-    text-align: center;
-    font-size: 50px;
-    font-weight: 800;
-    width: 100%;
-    color: white;
-    z-index: 1;
-  }
-  .signup-box {
-    position: relative;
-    text-align: center;
-    width: 100%;
-    bottom: -10%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
 
 /*For smartphone sized devices
 
@@ -891,8 +868,6 @@ Changed font sizes and minor adjustments to accomodate the smaller size screen*/
   }
   .finalText {
     position: relative;
-    top: 40%;
-    transform: translateY(-50%);
     padding: 30px 15px 0px 15px;
     margin: 0;
     text-align: center;
@@ -904,32 +879,29 @@ Changed font sizes and minor adjustments to accomodate the smaller size screen*/
   }
   .signup-box {
     position: relative;
-    text-align: center;
-    width: 100%;
-    bottom: -30%;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-top: 0px;
+    margin-bottom: 50px;
   }
   .signup-bttn {
     position: relative;
-    top: 30%;
-    transform: translateY(-50%);
     font-weight: 800;
     font-size: 25px;
     color: var(--background);
     background-color: white;
-    border-radius: 60px;
-    padding: 25px 60px;
     z-index: 2;
 
     transition-duration: 200ms;
   }
   .final {
     position: relative;
-    max-height: 330px;
+    justify-content: space-around;
+    top: 30px;
+    padding: 0px;
+    min-height: 200px;
+    max-height: 300px;
     text-align: center;
     background-color: var(--background);
-    z-index: 1;
+    z-index: 50;
   }
   .shoeMeasurement {
     text-align: center;
