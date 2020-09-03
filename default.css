@@ -19,7 +19,6 @@
   bottom: 41px;
   right: 30px;
   border-radius: 5px;
-  transform: translateY(1.5%);
   align-items: center;
   font-size: 20px;
   z-index: 1000;
@@ -31,8 +30,7 @@
   background: inherit;
 }
 .top-bttn i {
-  position: relative;
-  text-align: center;
+  align-self: auto;
 }
 body {
   margin: 0;
@@ -360,7 +358,6 @@ input:focus {
     width: 40px;
     background-color: var(--background);
     color: white;
-    position: relative;
     bottom: 41px;
     right: 5px;
     border-radius: 5px;
