@@ -205,7 +205,8 @@ input[name='r'] {
   flex-direction: column;
   position: relative;
   top: 30px;
-  height: 400px;
+  height: 50vh;
+  max-height: 400px;
   text-align: center;
   background-color: var(--background);
 }
@@ -925,11 +926,10 @@ Changed font sizes and minor adjustments to accomodate the smaller size screen*/
   }
   .final {
     position: relative;
-    top: 40px;
+    max-height: 330px;
     text-align: center;
-    height: 300px;
     background-color: var(--background);
-    z-index: 500;
+    z-index: 1;
   }
   .shoeMeasurement {
     text-align: center;
