@@ -20,6 +20,7 @@
   right: 30px;
   border-radius: 5px;
   text-align: center;
+  margin: 0 auto;
   font-size: 20px;
   z-index: 1000;
 }
@@ -30,7 +31,7 @@
   background: inherit;
 }
 .top-bttn i {
-  text-align: center;
+  display: inline;
 }
 body {
   margin: 0;
