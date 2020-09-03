@@ -16,7 +16,6 @@
   background-color: var(--background);
   border: none;
   color: white;
-  position: fixed;
   bottom: 41px;
   right: 50px;
   border-radius: 5px;
@@ -24,6 +23,7 @@
   outline: none;
   display: none;
   font-size: 20px;
+  justify-content: space-around;
   z-index: 1000;
 }
 
@@ -246,8 +246,12 @@ nav a:hover {
   font-size: 16.18px;
   top: 50%;
   transform: translateY(1.5%);
-  background: white;
-  border: 1.5px solid white;
+  background: var(--background);
+  border: 3px solid var(--background);
+}
+
+#newsLetter i {
+  color: white;
 }
 
 /* input box when selected */
@@ -321,7 +325,7 @@ input:focus {
     font-size: 18px;
   }
   .bottomPage .fas {
-    color: rgb(218, 87, 87);
+    color: white(218, 87, 87);
   }
 
   .bottomPage input {
@@ -338,8 +342,8 @@ input:focus {
   }
   .bottomPage button {
     font-size: 16.5px;
-    background: white;
-    border: 1.5px solid white;
+    background: var(--background);
+    border: 3px solid var(--background);
   }
 
   /*back to top button */

@@ -197,7 +197,7 @@ input[name='r'] {
   text-align: center;
   font-weight: 800;
   padding-top: 50px;
-  padding-bottom: 80px;
+  padding-bottom: 120px;
   color: #919090;
 }
 .final {
@@ -205,6 +205,7 @@ input[name='r'] {
   flex-direction: column;
   justify-content: space-around;
   position: relative;
+  top: 0px;
   height: 35vh;
   min-height: 400px;
   max-height: 500px;
@@ -895,7 +896,6 @@ Changed font sizes and minor adjustments to accomodate the smaller size screen*/
   .final {
     position: relative;
     justify-content: space-around;
-    top: 30px;
     padding: 0px;
     min-height: 200px;
     max-height: 300px;

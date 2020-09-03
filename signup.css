@@ -109,8 +109,8 @@ input[type='submit'] {
   margin-top: 70px;
   width: 120px;
   height: 32px;
-  background: #f44336;
-  border: 2px solid red;
+  background: var(--background);
+  border: 2px solid var(--background);
   border-radius: 50px;
   color: white;
   font-weight: 800;
