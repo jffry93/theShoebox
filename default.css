@@ -361,8 +361,8 @@ input:focus {
     background-color: var(--background);
     border: none;
     color: white;
-    position: fixed;
-    bottom: 5px;
+    position: relative;
+    bottom: 41px;
     right: 5px;
     border-radius: 5px;
     cursor: pointer;
