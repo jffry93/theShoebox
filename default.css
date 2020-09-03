@@ -20,6 +20,7 @@
   right: 30px;
   border-radius: 5px;
   transform: translateY(1.5%);
+  align-items: center;
   font-size: 20px;
   z-index: 1000;
 }
@@ -31,7 +32,7 @@
 }
 .top-bttn i {
   position: relative;
-  align-self: center;
+  text-align: center;
 }
 body {
   margin: 0;
